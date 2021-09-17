@@ -74,62 +74,65 @@ var points = [];
 const geometry = new THREE.SphereGeometry( 10, 50, 50 );
 var material = new THREE.MeshBasicMaterial( {color: 0xffffff} );
 
-
-const sphere1 = new THREE.Mesh( geometry, material );
-sphere1.position.x = 325; sphere1.position.y = 610; sphere1.position.z = -600;
-const to1 = {x: -1.749715823672447, y: 16.60824317257341, z: 3.230244597549133}
-
-const sphere2 = new THREE.Mesh( geometry, material );
-sphere2.position.x = 325; sphere2.position.y = 610; sphere2.position.z = -375;
-const to2 = {x: -2.026269597868586, y: 16.07215431797782, z: 2.3380033821560606}
-
-const sphere3 = new THREE.Mesh( geometry, material );
-sphere3.position.x = 325; sphere3.position.y = 610; sphere3.position.z = -125;
-const to3 = {x: -2.2574888505706165, y: 15.623944689663112, z: 0.8682649425271601}
-
-const sphere4 = new THREE.Mesh( geometry, material );
-sphere4.position.x = 325; sphere4.position.y = 610; sphere4.position.z = 140;
-const to4 = {x: -2.248879166470853, y: 15.640634231148807, z: -0.9687479486335986}
-
-const sphere5 = new THREE.Mesh( geometry, material );
-sphere5.position.x = 325; sphere5.position.y = 610; sphere5.position.z = 400;
-const to5 = {x: -1.9964214617362295, y: 16.130013781865156, z: -2.457134106752282}
-
-const sphere6 = new THREE.Mesh( geometry, material );
-sphere6.position.x = 325; sphere6.position.y = 610; sphere6.position.z = 650;
-const to6 = {x: -1.6895717140616973, y: 16.724830215818866, z: -3.379143428123393}
-
-const sphere7 = new THREE.Mesh( geometry, material );
-sphere7.position.x = 325; sphere7.position.y = 410; sphere7.position.z = -600;
-const to7 = {x: -2.0147509518800417, y: 17.334329509820254, z: 3.719540218855462}
-
-const sphere8 = new THREE.Mesh( geometry, material );
-sphere8.position.x = 325; sphere8.position.y = 410; sphere8.position.z = -375;
-const to8 = {x: -2.4747946591371757, y: 16.725656297141583, z: 2.8555322990044334}
-
-const sphere9 = new THREE.Mesh( geometry, material );
-sphere9.position.x = 325; sphere9.position.y = 400; sphere9.position.z = -125;
-const to9 = {x: -2.9785193227432614, y: 16.150836567531783, z: 1.1455843549012543}
-
-const sphere10 = new THREE.Mesh( geometry, material );
-sphere10.position.x = 325; sphere10.position.y = 400; sphere10.position.z = 140;
-const to10 = {x: -2.9588278500390315, y: 16.17628400918033, z: -1.274571996939891}
-
-const sphere11 = new THREE.Mesh( geometry, material );
-sphere11.position.x = 325; sphere11.position.y = 410; sphere11.position.z = 375;
-const to11 = {x: -2.474794659137176, y: 16.725656297141583, z: -2.855532299004433}
-
-const sphere12 = new THREE.Mesh( geometry, material );
-sphere12.position.x = 325; sphere12.position.y = 410; sphere12.position.z = 630;
-const to12 = {x: -1.959930647979294, y: 17.406860988827397, z: -3.79925017915986}
-
-const sphere13 = new THREE.Mesh( geometry, material );
-sphere13.position.x = 325; sphere13.position.y = 250; sphere13.position.z = -600;
-const to13 = {x: -2.2143712316863167, y: 18.160368515214444, z: 4.088069966190123}
-
-const sphere14 = new THREE.Mesh( geometry, material );
-sphere14.position.x = 325; sphere14.position.y = 250; sphere14.position.z = -375;
-const to14 = {x: -2.8764441161900143, y: 17.61033873424214, z: 3.3189739802192473}
+var sphereData = [
+  {
+    "position": {x: 325, y: 610, z: -600},
+    "to": {x: -1.749715823672447, y: 16.60824317257341, z: 3.230244597549133}
+  },
+  {
+    "position": {x: 325, y: 610, z: -375},
+    "to": {x: -2.026269597868586, y: 16.07215431797782, z: 2.3380033821560606}
+  },
+  {
+    "position": {x: 325, y: 610, z: -125},
+    "to": {x: -2.2574888505706165, y: 15.623944689663112, z: 0.8682649425271601}
+  },
+  {
+    "position": {x: 325, y: 610, z: 140},
+    "to": {x: -2.248879166470853, y: 15.640634231148807, z: -0.9687479486335986}
+  },
+  {
+    "position": {x: 325, y: 610, z: 400},
+    "to": {x: -1.9964214617362295, y: 16.130013781865156, z: -2.457134106752282}
+  },
+  {
+    "position": {x: 325, y: 610, z: 650},
+    "to": {x: -1.6895717140616973, y: 16.724830215818866, z: -3.379143428123393}
+  },
+  {
+    "position": {x: 325, y: 610, z: -600},
+    "to": {x: -2.0147509518800417, y: 17.334329509820254, z: 3.719540218855462}
+  },
+  {
+    "position": {x: 325, y: 410, z: -375},
+    "to": {x: -2.4747946591371757, y: 16.725656297141583, z: 2.8555322990044334}
+  },
+  {
+    "position": {x: 325, y: 400, z: -125},
+    "to": {x: -2.9785193227432614, y: 16.150836567531783, z: 1.1455843549012543}
+  },
+  {
+    "position": {x: 325, y: 400, z: 140},
+    "to": {x: -2.9588278500390315, y: 16.17628400918033, z: -1.274571996939891}
+  },
+  {
+    "position": {x: 325, y: 410, z: 375},
+    "to": {x: -2.474794659137176, y: 16.725656297141583, z: -2.855532299004433}
+  },
+  {
+    "position": {x: 325, y: 410, z: 630},
+    "to": {x: -1.959930647979294, y: 17.406860988827397, z: -3.79925017915986}
+  },
+  {
+    "position": {x: 325, y: 250, z: -600},
+    "to": {x: -2.2143712316863167, y: 18.160368515214444, z: 4.088069966190123}
+  },
+  {
+    "position": {x: 325, y: 250, z: -375},
+    "to": {x: -2.8764441161900143, y: 17.61033873424214, z: 3.3189739802192473}
+  }
+  // sphere15
+]
 
 const sphere15 = new THREE.Mesh( geometry, material );
 sphere15.position.x = 325; sphere15.position.y = 225; sphere15.position.z = -125;
@@ -309,6 +312,12 @@ const to58 = {x: -0.03729059528958949, y: 15.375966184090906, z: 1.9018203597690
 
 for (var i = 1; i <= 58; i++) {
   points.push(eval("sphere" + i))
+}
+
+for (var i = 0; i < 58; i++) {
+  const sphere = new THREE.Mesh(geometry, material);
+
+  points.push(sphere)
 }
 
 
