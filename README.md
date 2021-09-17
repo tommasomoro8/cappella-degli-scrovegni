@@ -1,2 +1,2 @@
-# Cappella degli Scrovegni 360° ⛪️
+# Cappella degli Scrovegni 360°
 📍 Padova, Italy
