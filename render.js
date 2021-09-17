@@ -74,16 +74,12 @@ const geometry = new THREE.SphereGeometry( 10, 50, 50 );
 const material = new THREE.MeshBasicMaterial( {color: 0xffffff} );
 const domEvents = new THREEx.DomEvents(camera, render.domElement)
 
-console.log(data)
-console.log(data[0].position)
-console.log(data[0].to)
-
-for (let i = 0; i < 57; i++) {
+for (let i = 0; i < data.length; i++) {
   const sphere = new THREE.Mesh(geometry, material)
 
-  sphere.position.x = data[i]["position"].x
-  sphere.position.y = data[i]["position"].y
-  sphere.position.z = data[i]["position"].z
+  sphere.position.x = data[i].position.x
+  sphere.position.y = data[i].position.y
+  sphere.position.z = data[i].position.z
   
   scene.add(sphere)
 
