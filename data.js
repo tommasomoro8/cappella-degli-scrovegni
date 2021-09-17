@@ -232,11 +232,3 @@ const data = [
       "to": {x: -0.03729059528958949, y: 15.375966184090906, z: 1.901820359769064}
     }
 ]
-
-for (let i = 0; i < data.length; i++) {
-    var ipiu = i + 1
-    if (ipiu != data.length && data[i].position == data[ipiu].position ) {
-        console.warn(i)
-        break
-    }
-}
