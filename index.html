@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=""/>
+  <title>Loading...</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link href="system/logo.png" rel="shortcut icon" type="imag/x-icon"/>
+  <script src="https://kit.fontawesome.com/8ec166334f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="loadingView" class="loadingView">
+      <div id="progressContainer">
+         <div id="bar"></div>
+      </div>
+   </div>
+
+   <div id="home" class="home">
+      <div id="homeTitle">La Cappella degli Scrovegni</div>
+      <input type="button" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
+   </div>
+   
+   <div id="indoor" class="indoor"></div>
+
+   <div id="description" class="description">
+      <div id="heading">
+         <button id="play" class="play"><i class="fas fa-play"></i></button>
+         <button id="pause" class="pause"><i class="fas fa-pause"></i></button>
+         <div id="headingContainer">
+            <div id="headingTitle" class="headingTitle"></div>
+            <div id="headingSpace" class="headingTitle">&nbsp;&nbsp;-&nbsp;&nbsp;</div>
+            <div id="headingSubtitle" class="headingTitle"></div>
+         </div>
+         <button onclick="closeDescription()" class="close"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="body-desc" id="bodyDesc">
+         <div class="image-container">
+            <div class="poster1">
+               <img id="img" class="img" src="" alt=""/>
+            </div>
+         </div>
+         <div id="text" class="text"></div>
+      </div>
+  </div>
+  <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
+   
+  <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
+  <button id="contactsButton" class="contactsButton" onclick="openContacts()"><i class="fas fa-id-card"></i></button>
+  <div id="rightButton">
+     <button id="darkMode" class="darkModeButton" onclick="changeMode('toLight')"><i class="far fa-lightbulb"></i></button>
+     <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
+     <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
+  </div>
+   
+
+  <script src="libraries/three.js"></script>
+  <script src="libraries/OrbitControls.js"></script>
+  <script src="libraries/threex.domevents.js"></script>
+  <script src="libraries/Tween.js"></script>
+
+  <script src="app.js"></script>
+  <script src="render.js"></script>
+
+  <script>
+   loadingView.classList.add('active')
+     preloadImages(() => {
+       loadingView.classList.remove('active')
+       changeLang()
+       goHome()
+     })
+  </script>
+   
+  <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
+</body>
+</html>
