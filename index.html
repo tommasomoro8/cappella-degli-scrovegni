@@ -10,12 +10,6 @@
   <script src="https://kit.fontawesome.com/8ec166334f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   <div id="loadingView" class="loadingView">
-      <div id="progressContainer">
-         <div id="bar"></div>
-      </div>
-   </div>
-
    <div id="home" class="home">
       <div id="homeTitle">La Cappella degli Scrovegni</div>
       <input type="button" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
@@ -63,11 +57,9 @@
   <script src="render.js"></script>
 
   <script>
-   loadingView.classList.add('active')
    preloadImages(() => {
-     loadingView.classList.remove('active')
-     changeLang()
-     goHome()
+     console.log("finito di caricare le immagini")
+      //abilita il bottone per passare all'interno
    })
   </script>
    

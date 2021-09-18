@@ -42,7 +42,6 @@ function goHome() {
   };
   indoor.style.display = "none";
   backHomeButton.style.display = "none";
-  //loadingView.style.display = "none";
   contactsButton.style.display = "flex";
   rightButton.style.display = "flex";
   home.style.display = "flex";
@@ -67,6 +66,8 @@ function changeLang() {
   };
 }
 langButton.addEventListener('click', changeLang)
+
+changeLang()
 
 function changeMode(to) {
   switch (to) {
