@@ -49,69 +49,15 @@ div {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    display: none; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-.loadingView {
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    background-color: black;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 200ms ease-in-out;
-    position: fixed;
-    top: 50%;
-    left: 50%;
 }
 
-#loadingView.active {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-}
-
-#progressContainer {
-    background-color: rgb(78, 78, 78);
-}
-
-#bar {
-    background-color: rgb(196, 196, 196);
-}
-
-@media (min-width: 10px) and (orientation:landscape) {
-    #progressContainer {
-        width: 80vh;
-        height: 7vh;
-        border-radius: 3vh;
-        box-shadow: 0px 0px 15vh rgb(94, 94, 94);
-    }
-
-    #bar {
-        width: 0%;
-        max-width: 78vh;
-        height: 5vh;
-        border-radius: 2vh;
-        margin-top: 1vh;
-        margin-left: 1vh;
-    } 
-}
-
-@media (min-width: 10px) and (orientation:portrait) {
-    #progressContainer {
-        width: 80vw;
-        height: 7vh;
-        border-radius: 3vw;
-        box-shadow: 0px 0px 15vw rgb(94, 94, 94);
-    }
-
-    #bar {
-        width: 0%;
-        max-width: 78vw;
-        height: 5vw;
-        border-radius: 2vw;
-        margin-top: 1vw;
-        margin-left: 1vw;
-    } 
+#homeTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(87, 87, 87);
+    /*da sistemare*/
 }
 
 .description {
@@ -359,7 +305,7 @@ div {
 }
 
 #rightButton {
-    display: none; align-items: center; text-align: center; align-content: center; justify-content: row;
+    display: flex; align-items: center; text-align: center; align-content: center; justify-content: row;
     z-index: 10;
     position: fixed;
     background: none; border: none;
@@ -368,7 +314,7 @@ div {
 }
 
 .contactsButton {
-    display: none; align-items: center; text-align: center; align-content: center; justify-content: center;
+    display: flex; align-items: center; text-align: center; align-content: center; justify-content: center;
     z-index: 10;
     position: fixed;
     left: 7px;
@@ -440,25 +386,4 @@ div {
     right: 0;
     z-index: 100;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#homeTitle {
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    text-shadow: 2px 2px 5px rgb(87, 87, 87);
 }
