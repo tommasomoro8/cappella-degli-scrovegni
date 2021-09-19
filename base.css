@@ -399,20 +399,35 @@ div {
     color: white;
 }
 
-#homeTitle {
+.homeTitle {
     font-weight: bold;
     font-size: 5vw;
+    overflow: hidden;
+    background-color: #353839;
 }
 
-#homesubtitle {
+.homeTitle span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+.homesubtitle {
     width: 60%;
     border-top: solid 2px white;
-    margin-top: 15px;
+    margin-top: 5px;
+    padding-top: 5px;
     font-size: 2vw;
+    overflow: hidden;
+}
+
+.homesubtitle span {
+    transform: translateY(-100%);
+    display: inline-block;
 }
 
 .button-container {
-    margin-top: 2vh;
+    margin-top: 1vh;
+    text-align: center;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -420,4 +435,21 @@ div {
 
 #home-button {
     font-size: 2vw;
+    border-radius: 30px;
+    border: none;
+    height: 3.5vw;
+    width: 15%;
+    background-color: white;
+    color: black;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#home-button:hover {
+    background-color: #353839;
+    color: white;
+}
+
+.home-down {
+    background-color: #353839;
 }

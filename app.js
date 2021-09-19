@@ -7,7 +7,6 @@ function preloadImages(callback) {
     img.src = imageSrc
     img.onload = () => {
       imagesLoaded++
-      animateProgressBar(imagesLoaded)
       if (imagesLoaded === 64) callback()
     }
   }
@@ -17,15 +16,9 @@ function preloadImages(callback) {
     img.src = "img/" + i + ".png"
     img.onload =() => {
       imagesLoaded++
-      animateProgressBar(imagesLoaded)
       if (imagesLoaded === 64) callback()
     }
   }
-}
-
-function animateProgressBar(imagesLoadedCount) {
-  var progress = imagesLoadedCount / 64 * 100
-  bar.style.width = progress + "%"
 }
 
 function goIndoor() {
