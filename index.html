@@ -10,12 +10,22 @@
   <script src="https://kit.fontawesome.com/8ec166334f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+   
    <div id="home" class="home">
       <div class="home-container">
-         <div id="homeTitle">La Cappella degli Scrovegni</div>
-         <div id="homesubtitle">Patrimonio dell'UNESCO dal 2021</div>
-         <div class="button-container">
-            <button id="home-button" onclick="goIndoor()">Entra</button>
+         <div class="home-up">
+            <div id="homeTitle" class="homeTitle">
+               <span class="ani-top">La Cappella degli Scrovegni</span>
+            </div>
+         </div>
+         <div class="home-down">
+            <div id="homesubtitle" class="homesubtitle">
+               <span class="ani-bottom">Patrimonio dell'UNESCO dal 2021</span>
+            </div>
+            <div class="button-container">
+                  <button id="home-button" onclick="goIndoor()">Entra</button>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -58,7 +68,12 @@
      <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
      <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
   </div>
-   
+
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+   ></script>
 
   <script src="libraries/three.js"></script>
   <script src="libraries/OrbitControls.js"></script>
@@ -67,6 +82,7 @@
 
   <script src="app.js"></script>
   <script src="render.js"></script>
+  <script src="/utils/animazione.js"></script>
 
   <script>
    preloadImages(() => {
