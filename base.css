@@ -52,6 +52,57 @@ div {
     display: none; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
 }
 
+/*provvisorio*/
+
+.reportProblem {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.problemDiv {
+    display: flex;
+    flex-direction: column;
+    width: 10vh;
+    margin-left: 45vh;
+}
+
+#problemDescription {
+    width: 14vw;
+    height: 10vh;
+    margin-top: 2vh;
+}
+
+#problemEmail {
+    width: 14vw;
+    height: 2vh;
+    margin-top: 2vh;
+}
+
+#problemButton {
+    width: 14vw;
+    height: 2vh;
+    margin-top: 2vh;
+}
+
+#problemStatus {
+    color: white;
+    margin-top: 2vw;
+}
+
+#homeTitle {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(87, 87, 87);
+}
+
+
+/*fino a qui*/
+
 .loadingView {
     width: 100vw;
     height: 100vh;
@@ -440,25 +491,4 @@ div {
     right: 0;
     z-index: 100;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#homeTitle {
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    text-shadow: 2px 2px 5px rgb(87, 87, 87);
 }
