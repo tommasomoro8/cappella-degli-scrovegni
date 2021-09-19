@@ -48,16 +48,8 @@ div {
 .home {
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: #353839;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-#homeTitle {
-    color: white;
-    font-weight: bold;
-    font-size: 50px;
-    text-shadow: 2px 2px 5px rgb(87, 87, 87);
-    /*da sistemare*/
 }
 
 .description {
@@ -386,4 +378,46 @@ div {
     right: 0;
     z-index: 100;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* home css */
+
+
+.home-container {
+    margin: auto;
+    text-align: left;
+    color: white;
+}
+
+#homeTitle {
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+#homesubtitle {
+    width: 60%;
+    border-top: solid 2px white;
+    margin-top: 15px;
+    font-size: 2vw;
+}
+
+.button-container {
+    margin-top: 2vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#home-button {
+    font-size: 2vw;
 }
