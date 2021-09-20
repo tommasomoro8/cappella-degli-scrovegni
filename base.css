@@ -218,7 +218,7 @@ div {
     margin: none;
 }
 
-.pause {
+.stop {
     width: 4vw;
     height: 4vw;
     font-size: 3.8vh;
@@ -365,7 +365,7 @@ div {
         font-size: 3.8vw;
     }
 
-    .pause {
+    .stop {
         font-size: 3.8vw;
     }
     
