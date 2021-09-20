@@ -29,6 +29,22 @@
          </div>
       </div>
    </div>
+
+   <!--provvisorio-->
+   <div id="reportProblem" class="reportProblem" style="display: none;">
+      <div id="homeTitle">Segnala un problema</div>
+      <div class="problemDiv">
+         <input type="text" id="problemEmail" placeholder="your email"/>
+         <textarea id="problemDescription" placeholder="description"></textarea>
+         <div class="row" style="color: white;">
+            <input type="checkbox" id="problemReplay" checked/>
+            <div>Vorrai essere ricontattato?</div>
+         </div>
+         <button id="problemButton">invia</button>
+         <div id="problemStatus"></div>
+      </div>
+   </div>
+   <!--funo a qui-->
    
    <div id="indoor" class="indoor"></div>
 
@@ -77,6 +93,7 @@
   <script src="libraries/threex.domevents.js"></script>
   <script src="libraries/Tween.js"></script>
 
+  <script src="data.js"></script>
   <script src="app.js"></script>
   <script src="render.js"></script>
   <script src="/utils/animazione.js"></script>
@@ -87,6 +104,8 @@
       //abilita il bottone per passare all'interno
    })
   </script>
+
+  <script type="module" src="firebase.js"></script>
    
   <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
 </body>
