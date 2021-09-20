@@ -10,33 +10,52 @@
   <script src="https://kit.fontawesome.com/8ec166334f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+   
    <div id="home" class="home">
-      <div id="homeTitle">La Cappella degli Scrovegni</div>
-      <input type="button" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
+      <div class="home-container">
+         <div class="home-up">
+            <div id="homeTitle" class="homeTitle">
+               <span class="ani-top">La Cappella degli Scrovegni</span>
+            </div>
+         </div>
+         <div class="home-down">
+            <div id="homesubtitle" class="homesubtitle">
+               <span class="ani-bottom">Patrimonio dell'UNESCO dal 2021</span>
+            </div>
+            <div class="button-container">
+                  <button id="home-button" onclick="goIndoor()">Entra</button>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
    
    <div id="indoor" class="indoor"></div>
 
    <div id="description" class="description">
       <div id="heading">
-         <button id="play" class="play"><i class="fas fa-play"></i></button>
-         <button id="pause" class="pause"><i class="fas fa-pause"></i></button>
          <div id="headingContainer">
-            <div id="headingTitle" class="headingTitle"></div>
-            <div id="headingSpace" class="headingTitle">&nbsp;&nbsp;-&nbsp;&nbsp;</div>
             <div id="headingSubtitle" class="headingTitle"></div>
+            <div id="headingTitle" class="headingTitle"></div>
          </div>
-         <button onclick="closeDescription()" class="close"><i class="fas fa-times"></i></button>
+         <div class="container-bottoni">
+            <button id="play" class="play"><i class="fas fa-play"></i></button>
+            <button id="pause" class="pause"><i class="fas fa-pause"></i></button>
+            <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
+         </div>
       </div>
       <div class="body-desc" id="bodyDesc">
-         <div class="image-container">
-            <div class="poster1">
-               <img id="img" class="img" src="" alt=""/>
+         <div id="text5" class="text">
+            <div class="image-container">
+               <div class="poster1">
+                  <img id="img" class="img" src="" alt=""/>
+               </div>
             </div>
+            <span id="text"></span>
          </div>
-         <div id="text" class="text"></div>
       </div>
   </div>
+
   <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
    
   <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
@@ -46,7 +65,12 @@
      <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
      <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
   </div>
-   
+
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+   ></script>
 
   <script src="libraries/three.js"></script>
   <script src="libraries/OrbitControls.js"></script>
@@ -55,6 +79,7 @@
 
   <script src="app.js"></script>
   <script src="render.js"></script>
+  <script src="/utils/animazione.js"></script>
 
   <script>
    preloadImages(() => {
