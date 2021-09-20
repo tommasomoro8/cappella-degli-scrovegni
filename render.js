@@ -109,7 +109,7 @@ function animationCamera(point) {
       camera.position.set(this.x, this.y, this.z);
     })
     .onComplete(function () {
-      openDescription(point + 1)
+      openDescription(point)
     })
     .start();
 }
