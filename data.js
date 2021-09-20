@@ -733,13 +733,13 @@ const data = [
         title: "Speranza",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Attesa fiduciosa, più o meno giustificata, di un evento gradito o favorevole.<br>Con volto pacificato spicca il volo, le mani protese verso la corona della gloria, verso il paradiso del Giudizio universale. Il corpo, il capo, le braccia: ogni dettaglio ripropone il Cristo dell’Ascensione.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "Confident expectation, more or less justified, of a welcome or favorable event.<br>With a pacified face he takes flight, his hands stretched out towards the crown of glory, towards the paradise of the Last Judgment. The body, the head, the arms: every detail proposes the Christ of the Ascension.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -757,13 +757,13 @@ const data = [
         title: "Carità",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "L’amore che unisce gli uomini con Dio, e tra loro attraverso Dio.<br>Il capo aureolato, coronato di fiori, lo sguardo intensamente rivolto a Gesù, a cui con una mano offre il cuore, mentre con l’altra mano offre al prossimo una canestra piena di fiori, frutti e spighe. La carità fiorisce come gratitudine per il fatto di essere amorevolmente amati e preferiti da Gesù. Donare al prossimo e calpestare l’idolo dell’avere viene come conseguenza. È la virtù più bella.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "The love that unites men with God, and with each other through God.<br>The haloed head, crowned with flowers, the gaze turned intensely to Jesus, to whom she offers her heart with one hand, while with the other hand she offers the neighbor a basket full of flowers, fruits and ears. Charity flourishes as gratitude for the fact of being lovingly loved and preferred by Jesus. Giving one's neighbor and trampling on the idol of having comes as a consequence. It is the most beautiful virtue.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -781,13 +781,13 @@ const data = [
         title: "Fede",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Complesso dei principi seguiti nella vita morale, il fatto di credere con assoluta convinzione nella verità e giustezza di un assunto.<br>Forte e sicura, ti guarda dritto negli occhi. Dal mantello le spunta la chiave, il segno del Papa che ha il dovere di custodire integra la fede. Con la sinistra regge un cartiglio su cui sta scritto il credo; con la destra una croce ad asta che, giù a terra, sta frantumando l’idolo; sotto i piedi calpesta gli oroscopi. Scismi ed eresie hanno aperto dolorosi strappi nel mantello e nella tunica di lei, ma non ne hanno rovinato il volto.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "Complex of the principles followed in the moral life, the fact of believing with absolute conviction in the truth and correctness of an assumption.<br>Strong and confident, she looks you straight in the eye. The key appears from her cloak, the sign of the Pope who has the duty to keep the faith intact. With her left hand she holds a scroll on which the creed is written; with the right a pole cross that, down on the ground, is shattering the idol; under her feet he tramples the horoscopes. Schisms and heresies have opened painful tears in her cloak and in her tunic, but they have not ruined her face.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -805,13 +805,13 @@ const data = [
         title: "Giustizia",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Volontà di riconoscere e rispettare il diritto di ognuno mediante l’attribuzione di quanto gli è dovuto secondo la ragione e la legge.<br>Siede, regale, su un trono prezioso, di fronte alla porta della città. Regge una bilancia con cui pesa ogni cosa con grande equilibrio, com’è scritto sotto. Con la destra regge un piatto sul quale sta un angelo che incorona per bene, mentre sta giustiziando il male. Nella predella ai suoi piedi, quattro cavalieri procedono sicuri, dirigendosi verso un villaggio in festa, dove si suona e si danza.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "You will want to recognize and respect the right of everyone by attributing what is due to them according to reason and law.<br>She sits royally on a precious throne opposite the city gate. She holds a scale with which she weighs everything with great balance, as it is written below. With her right hand she holds a plate on which stands an angel whom she crowns for good, while she is executing evil. In the dais at her feet, four horsemen proceed safely, heading towards a festive village, where she plays and dances.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -829,13 +829,13 @@ const data = [
         title: "Temperanza",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Capacità di controllare e mantenere nei giusti limiti il soddisfacimento degli appetiti naturali.<br>Ha la spada fasciata con una lunga cintura di cuoio, e la bocca tenuta a freno da una briglia come si fa coi cavalli, perché “uccide più la lingua che la spada”.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "Ability to control and keep the satisfaction of natural appetites within the right limits.<br>She has her sword bandaged with a long leather belt, and her mouth held in check by a bridle as is done with horses, because she “kills more the tongue than the sword”.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -853,13 +853,13 @@ const data = [
         title: "Fortezza",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Accentuata capacità di azione, reazione e resistenza.<br>Eretta, decisa, con la destra brandisce una mazza, con la sinistra sorregge una grande scudo e un leone rampante. Una pelle di leone le fa da mantello: la testa della fiera come elmo, le zampe anteriori annodate al collo, quelle posteriori in vita. Forte come un leone, vigile come una sentinella nella notte.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "Emphasized capacity for action, reaction and resistance.<br>She erect, determined, with the right she wields a club, with the left she holds a large shield and a rampant lion. A lion's skin acts as a cloak: the fair's head as a helmet, her front legs knotted around her neck, her hind legs at the waist. Strong as a lion, alert as a sentry in the night.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -877,13 +877,13 @@ const data = [
         title: "Prudenza",
         subtitle: "Allegorie delle Virtù e dei Vizi",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Atteggiamento cauto ed equilibrato di chi, intuendo la presenza di una pericolo o prevendendo le conseguenze dei suoi atti, si comporta in modo da non correre inutili rischi e da evitare a sé e ad altri qualsiasi possibile danno.<br>Evoca le vergini prudenti del vangelo, opposte alle vergini stolte; è la virtù dell’insegnante. Siede in cattedra, davanti a un libro. In una mano ha il compasso e nell’altra uno specchio: si guarda prudentemente alle spalle, imparando dalla tradizione. Ma quello specchio è anche un invito alla riflessione.",
+            textAuthor: "Scritto da Ginevra Taddei",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "A cautious and balanced attitude of those who, sensing the presence of a danger or foreseeing the consequences of their actions, behave in such a way as not to run unnecessary risks and to avoid any possible damage to themselves and others.<br>It evokes the prudent virgins of the gospel, opposed to the foolish virgins; it is the virtue of the teacher. He sits in the chair, in front of a book. In one hand he has a compass and in the other a mirror: he carefully looks over his shoulder, learning from tradition. But that mirror is also an invitation to reflection.",
+            author: "Written by Ginevra Taddei",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -901,12 +901,12 @@ const data = [
         title: "Incontro alla Porta Aurea",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
+            text: "Gioacchino dopo essere stato cacciato dal  Tempio di Gerusalemme per essere ritenuto sterile. A quei tempi si pensava che se un uomo era sterile non era benedetto da Dio.<br>Gioacchino, quindi, si rifugiò in ritiro presso i pastori delle montagne. <br>Intanto Anna, convinta di essere rimasta vedova, riceve un miracoloso annuncio da un angelo che le aveva rivelato che presto avrebbe avuto un bambino. <br>Pure Gioacchino riceve in sogno la visita di un angelo, che lo confortava dicendogli come Dio avesse ascoltato le sue preghiere e dovesse tornare a casa dalla moglie. <br>La scena mostrata dall’affresco in questione, dunque, rappresenta il toccante incontro tra i due, che secondo lo Pseudo Matteo (3,5), avvenne davanti alla Porta d'Oro o Porta Aurea di Gerusalemme, dopo che entrambi erano stati avvisati da messaggeri divini. Da sinistra proviene infatti Gioacchino, seguito da un pastore, e da destra Anna, seguita da un gruppo di donne diversificate per classe sociale, studiate accuratamente nelle acconciature e negli abiti. I due consorti vanno incontro l'uno all'altro e, subito fuori dalla porta, su un ponticello, si scambiano un affettuoso bacio, che allude alla procreazione: infatti Anna rimase subito dopo incinta.<br>L'architettura della porta ricorda l'arco di Augusto di Rimini. Celebre è la naturalezza della scena, col pastore che incede per metà tagliato fuori dalla scena o col bacio e l'abbraccio reciproco della coppia, sicuramente il più realistico dipinto fino ad allora e che rimarrà tale per quasi due secoli. La coppia come una “piramide plastica” dalla grande forza espressiva. <br>Emblematica è la figura vestita di nero, colore raro in Giotto, che si copre metà del volto col mantello: forse un'allusione allo stato di vedovanza tenuto fino ad allora da Anna.<br>La luce ha un ruolo chiave nella composizione, definendo il volume delle figure e anche la profondità spaziale, come mostrano i pilastri posteriori delle altane nelle torri, dipinti in ombra. <br>Prevalgono le tinte pastello e molto curati sono i dettagli, soprattutto nel gruppo delle ricche donne. <br>Bilanciato con sapienza è il rapporto tra figure e architettura, che non è un semplice sfondo, ma il vero palcoscenico dell'azione, abitato dai personaggi.",
             textAuthor: "Scritto da ",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
+            text: "Joachim after being expelled from the Temple of Jerusalem to be deemed sterile. In those days it was thought that if a man was barren he was not blessed by God.<br>Joachim, therefore, took refuge in retreat with the shepherds of the mountains.<br>Meanwhile, Anna, convinced that she was a widow, she receives a miraculous announcement from an angel who had revealed to her that she would soon have a baby.<br>Joachim also receives in a dream the visit of an angel, who comforted him by telling him how God had listened to his prayers and had to go home to his wife.<br>The scene shown by the fresco in question, therefore, represents the touching meeting between the two, which according to Pseudo Matthew (3,5), took place in front of the Golden Gate or Golden Gate of Jerusalem, after both had been warned by divine messengers. From the left comes Joachim, followed by a shepherd, and from the right Anna, followed by a group of women diversified by social class, carefully studied in hairstyles and dresses. The two spouses go to meet each other and, immediately outside the door, on a small bridge, they exchange an affectionate kiss, which alludes to procreation: in fact Anna was immediately pregnant afterwards.<br>The architecture of the door recalls the Arch of Augustus of Rimini. Famous is the naturalness of the scene, with the shepherd who walks halfway cut out of the scene or with the kiss and the mutual embrace of the couple, certainly the most realistic painting until then and which will remain so for almost two centuries. The couple like a “plastic pyramid” with great expressive power.<br>Emblematic is the figure dressed in black, a rare color in Giotto, who covers half of his face with a cloak: perhaps an allusion to the state of widowhood held up to then by Anna.<br>Light plays a key role in the composition, defining the volume of the figures and also the spatial depth, as shown by the rear pillars of the roof terraces in the towers, painted in shadow.<br>Pastel shades prevail and details are well cared for, especially in the group of rich women.<br>Balanced with wisdom is the relationship between figures and architecture, which is not a simple background, but the real stage of the action, inhabited by the characters.",
             author: "Written by ",
             audioAuthor: "Voice of Greta Beraldo"
         }
@@ -925,13 +925,13 @@ const data = [
         title: "Il sogno",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Il Sogno di Gioacchino è un affresco (200x185 cm) di Giotto, databile al 1303-1305 circa e situato nel registro più alto della parete destra, guardando verso l'altare. <br>L'ambientazione della scena è la stessa di quella del Ritiro di Gioacchino tra i pastori. L'uomo anziano si è addormentato davanti alla capanna delle greggi e un angelo gli appare in sogno annunciandogli la prossima nascita di Maria, sua figlia. L'angelo tiene in mano un bastone impugnato come uno scettro, dal quale fuoriescono in cima tre foglioline, simbolo della Trinità. La figura di Gioacchino accovacciato e dormiente è una massa plastica piramidale di stampo scultoreo, col panneggio trattato in modo da rendere visibile il corpo sottostante, amplificato nella massa, e lo stringersi del tessuto per avvolgere il corpo. La figura è stata messa in relazione con una analoga di Giovanni Pisano (da alcuni attribuita ad Arnolfo di Cambio) nel pulpito del Duomo di Siena.<br>Assistono due pastori ritratti con cura dei dettagli (dall'abito e il cappello alle calzature, fino al bastone al quale uno si appoggia impigliando una parte della veste) e vicini al gregge, che riposa o bruca, e al cane. Attenta è anche la rappresentazione degli arbusti dell'aspro paesaggio montano, curati con precisione da miniatore.<br>Ben studiata appare la composizione, con la linea di forza del crinale roccioso parallela all'andamento dell'angelo e che culmina verso la figura di Gioacchino, dirigendovi senza esitazioni lo sguardo dello spettatore. Bilanciato con sapienza è il rapporto tra figure e paesaggio, che non è un semplice sfondo, ma il vero palcoscenico dell'azione, abitato dai personaggi. La stesura è morbida con un uso intenso dei colori e un sapiente uso delle luci e delle ombre per evidenziare la plasticità delle figure.",
+            textAuthor: "Scritto da Aurora Bozzo",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "“Il Sogno di Gioacchino” is a fresco (200x185 cm) by Giotto, dating to about 1303-1305 and located in the highest register of the right wall, looking towards the altar.<br>The setting of the scene is the same as that of Joachim’s Retreat among the shepherds. The old man fell asleep in front of the sheep hut and an angel appears to him in a dream announcing the next birth of Mary, his daughter. The angel holds in his hand a stick held like a sceptre, from which emerge on top three leaflets, symbol of the Trinity. The figure of Joachim crouching and sleeping is a pyramidal plastic mass of sculptural mould, with the drapery treated in such a way as to make visible the underlying body, amplified in the mass, and the tightening of the fabric to wrap the body. The figure was related to a similar one by Giovanni Pisano (attributed by some to Arnolfo di Cambio) in the pulpit of the Cathedral of Siena.<br>They assist two shepherds portrayed with care of details (from the dress and the hat to the shoes, up to the stick to which one leans entangling a part of the garment) and close to the flock, which rests or burns, and to the dog. Careful is also the representation of the shrubs of the rugged mountain landscape, cured with precision as a illuminator.<br>The composition appears well studied, with the line of force of the rocky ridge parallel to the course of the angel and that culminates towards the figure of Joachim, directing without hesitation the gaze of the spectator. Balanced with wisdom is the relationship between figures and landscape, which is not a simple background, but the real stage of the action, inhabited by the characters. The coat is soft with an intense use of colors and a wise use of lights and shadows to highlight the plasticity of the figures.",
+            author: "Written by Aurora Bozzo",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -949,13 +949,13 @@ const data = [
         title: "Il sacrificio",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Questo affresco è stato realizzato da Giotto di Bondone tra il 1303 e il 1305 circa, ha un’altezza complessiva di circa 208 cm ed è largo 220cm.<br>Ci troviamo tra le montagne, come è possibile osservare dallo sfondo dell’opera, ambiente rappresentato da due spuntoni rocciosi.<br> Bilanciato è il rapporto tra figure e paesaggio, che è il vero palcoscenico dell'azione, abitato dai personaggi.<br>Qui è raffigurata la scena in cui San Gioacchino sacrifica un agnello a Dio su un altare.<br>È possibile intuire l’avvenimento di questo sacrifico poiché in cima all’altare si trova il piccolo scheletro di un agnellino morto.<br>Dall'offerta sacrificale si leva una piccola figura di frate, un'apparizione simbolica in parte aggiunta a secco e oggi semi-scomparsa.<br>Alla presenza di un pastore che prega, con vicino una parte del gregge, l'anziano si sporge verso l'altare per soffiare sul fuoco e cuocere l'agnello.<br>Tale offerta è stata fatta per chiedere la grazia di un figlio a Dio, il quale sembra aver accettato e ad indicarlo è la presenza di una mano tesa versa l’anziano, che simboleggia la mano di Dio pronto ad aiutarlo.<br>Questo antico sacrificio fatto da Gioacchino è icona di quello che in futuro sarà il sacrifico eucaristico.<br>Ben studiata è la composizione, con linee di forza sull'altare del sacrificio e la figura di Gioacchino molto convincente pur in una posizione insolita. <br>Il pastore è rappresentato con un cappello e calzature pesanti, mentre le pecore sono colte in atteggiamenti studiati , infatti i due maschi si sfidano a cornate, altri stanno sdraiati in tranquillità, altri brucano gli arbusti.",
+            textAuthor: "Scritto da Greta Beraldo",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "This fresco was made by Giotto di Bondone between about 1303 and 1305, has a total height of about 208 cm and is 220cm wide.<br>We are located in the mountains, as you can observe from the background of the work, an environment represented by two rocky spikes.<br> Balanced is the relationship between figures and landscape, which is the real stage of the action, inhabited by the characters.<br>Here is depicted the scene in which Saint Joachim sacrifices a lamb to God on an altar.<br>It is possible to guess the event of this sacrifice since at the top of the altar is the small skeleton of a dead lamb.<br>From the sacrificial offer, rises a small figure of friar, a symbolic apparition partly added dry and now semi-disappeared.<br>In the presence of a shepherd praying, with a part of the flock nearby, the elder leans towards the altar to blow on the fire and cook the lamb.<br>This offer was made to ask for the grace of a son to God, who seems to have accepted and to indicate it is the presence of an outstretched hand pours the elder, symbolizing the hand of God ready to help him.<br>Well studied is the composition, with lines of strength on the altar of sacrifice and the figure of Joachim very convincing even in an unusual position.<br>The shepherd is represented with a hat and heavy footwear, while the sheep are caught in studied attitudes , in fact the two males compete with horns, others are lying in peace, others graze the shrubs.",
+            author: "Written by Greta Beraldo",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -973,13 +973,13 @@ const data = [
         title: "Annuncio a Sant'Anna",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "L'Annuncio a sant'Anna è un affresco di Giotto che risiede nella Cappella degli Scrovegni, databile al 1303-1305 circa, fa parte delle Storie di Gioacchino e Anna.<br>La scena raffigura sant'Anna, mentre prega nella sua stanza e un angelo le porta l'annuncio della sua maternità, l’angelo annunziante compare da una piccola finestra in alto, mentre Sant’Anna è inginocchiata all’interno verso di lui con le mani giunte.<br>Quest’affresco si ispira alla classica scena dell’annunciazione ma e ambientato in un contesto domestico descritto con cura.<br>La stanza ha una decorazione di tipo classicheggiante, con fregi scolpiti, tetto a spioventi e timpani.<br>Per realizzare la costruzione architettonica Giotto si è affidato alla chiarezza della forma geometrica.",
+            textAuthor: "Scritto da Leonardo Bardi",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "The Announcement to St. Anne is a fresco by Giotto that resides in the Scrovegni Chapel, dating from about 1303-1305, is part of the Stories of Joachim and Anne. <br>The scene depicts St. Anne as she prays in her room and an angel brings her the announcement of her motherhood, the announcing angel appears from a small window above, while St. Anne is kneeling inside towards him with her hands clasped. <br> This fresco is inspired by the classical scene of the Annunciation but is set in a carefully described domestic context. <br> The room has a decoration of classical type, with carved friezes, roof to spioventi and timpani. <br> To achieve the architectural construction Giotto relied on the clarity of geometric form.",
+            author: "Written by Leonardo Bardi",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -997,13 +997,13 @@ const data = [
         title: "Ritiro fra i pastori",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "Affresco realizzato da Giotto tra il 1303 e il 1305 appartenente al registro più alto della parete destra quindi alle storie di Gioacchino e Anna. In esso viene reppresentata la scena in cui, dopo la cacciata dal tempio, Gioacchino si ritira in penitenza tra i pastori in montagna cercando la solitudine.<br>Egli è rappresentato a testa bassa, mesto e raccolto, trasmettendoci così la sua mortificazione; ai suoi piedi c'è un cagnolino che è rappresentato, contrariamente a lui, in un atteggiamento festoso e felice; esso è simbolo di fedeltà, quella che lui ha nei confronti di Dio e che il creatore ha per lui. Davanti a Gioacchino ci sono due pastori pensierosi affiancati da una capanna da cui escono le  pecore: entrambi sono simboli di quella che sarà la futura chiesa di Cristo, con i suoi sacerdoti che condurranno i fedeli (rappresentati dalle pecorelle) al sicuro. Alberelli spuntano qua e là stagliandosi sullo sfondo.<br>L'affresco è caratterizzato da una stesura morbida, un uno intenso di colori e di chiaroscuro che evidenzia la plasticità delle figure; c'è un grande rapporto tra sfondo e figure che ci trasmette un complesso unitario.",
+            textAuthor: "Scritto da Sara Bandiera",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "Fresco made by Giotto between 1303 and 1305 belonging to the highest register of the right wall then to<br>the stories of Joachim and Anna. In it is represented the scene in which, after the expulsion from the<br>temple, Joachim retreats into penance among the shepherds in the mountains seeking solitude.<br>He is represented with a low head, sad and collected, thus transmitting his mortification; The fresco is<br>characterized by a soft texture, an intense color and chiaroscuro that highlights the plasticity of the<br><br>figures; There is a great relationship between background and figures that gives us a unitary complex.<br>The fresco is characterized by a soft surface, an intense color and chiaroscuro that highlights the<br>plasticity of the figures; there is a great relationship between background and figures that gives us a<br>unitary complex.",
+            author: "Written by Sara Bandiera",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -1021,13 +1021,13 @@ const data = [
         title: "Cacciata dal Tempio",
         subtitle: "Storie di San Gioacchino e di Sant'Anna",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "La Cacciata dei mercanti dal Tempio è un affresco di Giotto, situato nella Cappella degli Scrovegni di Padova; quest’opera è stata realizzata intorno al 1303 e misura 200x185 cm. <br>La scena raffigurata si colloca davanti al Tempio di Gerusalemme, e presenta il personaggio di Gesù Cristo, dotato da un volto fisso e ricco della propria determinazione, alza il proprio pugno, impugna una corda e si scaraventa contro dei mercanti che stanno infestando questo luogo sacro, e le cui gabbie di animali stanno a terra insieme ad un tavolino ribaltato; un caprone sta fuggendo e, spaventato, salta via, mentre dietro i sacerdoti hanno uno sguardo perplesso e gli apostoli sono stupiti (Pietro in particolare). A sinistra se ne vanno altri animali oltre il bordo della scena, mentre due bambini si rifugiano tra le vesti degli apostoli, con espressioni particolarmente naturali, sia quello sotto Pietro che quello vestito di rosso che si stringe all'apostolo in primo piano, che si curva per proteggerlo. Il motivo della gabbia dovette piacere, infatti si decise a affresco completato di aggiungerne una seconda in mano all'uomo al centro della scena, oggi parzialmente scomparsa.",
+            textAuthor: "Scritto da Alberto Baldasso",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "The “Cacciata dei mercanti dal tempio” is a fresco by Giotto, located in “Cappella degli Scrovegni” in Padua; this work was made around 1303 and measures 200x185 cm. The depicted scene is placed in front of the Temple of Jerusalem, and presents the character of Jesus Christ, endowed with a fixed face and rich in his own determination, raises his fist, He holds a rope, and hurls himself against the merchants who are haunting this holy place, whose cages of animals are on the ground with a table overturned; A goat is fleeing and, frightened, jumps away, while behind the priests have a perplexed look and the apostles are amazed (Peter in particular). On the left, other animals go beyond the edge of the scene, while two children take refuge in the robes of the apostles, with particularly natural expressions, both the one under Peter and the one dressed in red that holds the apostle in the foreground, He’s bent over to protect him. The reason for the cage had to be pleased, in fact it was decided to complete the fresco to add a second in the hands of the man in the center of the scene, now partially disappeared.",
+            author: "Written by Alberto Baldasso",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
@@ -1045,13 +1045,13 @@ const data = [
         title: "Strage degli innocenti",
         subtitle: "Storie di Gesù",
         IT: {
-            text: "",
-            textAuthor: "Scritto da ",
+            text: "La Strage degli innocenti è un affresco (200x185 cm) di Giotto, databile al 1303-1305 circa che fa parte del ciclo della Cappella degli Scrovegni a Padova. Situata nella parete destra guardando verso l'altare, è compresa nelle Storie di Gesù del registro centrale superiore.<br>La scena, di crudo realismo, è una delle più drammatiche del ciclo; racconta di un episodio biblico, la strage degli innocenti, ordinata da Re Erode per tentare l’omicidio di Gesù.<br>Come in altre scene del ciclo, l'architettura dello sfondo aiuta a definire i gruppi di figure e facilita la lettura della scena. <br>In alto a sinistra, da un balcone coperto, Erode, stendendo il braccio, impartisce il comando di uccidere tutti i fanciulli nati negli ultimi mesi. Si rivolge alle madri disperate, raggruppate dietro un edificio a pianta centrale, che si vedono strappare i figli dai soldati, che vengono ritratti armati, in pose drammatiche e con colori cupi.<br>In basso stanno già i corpi ammassati di numerosi fanciulli, che sembrano quasi passare oltre la cornice dell'affresco per concentrare l’attenzione altrove. A sinistra infine alcuni spettatori mostrano tutto il loro turbamento abbassando la testa e facendo espressioni rassegnate.<br>I bambini sono più grandi del normale, probabilmente per farne protagonisti della scena. Le madri hanno espressioni profondamente angosciate, (sentimento che prevale) con la bocca dischiusa in un lamento comune e le guance rigate dalle lacrime, come riemerso con l'ultimo restauro.<br>Come in altre scene su questo lato della parete (l'azzurro di lapislazzuli, steso probabilmente a secco) è in più punti danneggiato da graffi e cadute di colore, nel cielo come nella veste della donna a destra.",
+            textAuthor: "Scritto da Benedetta Martinelli",
             audioAuthor: "Voce di "
         },
         EN: {
-            text: "",
-            author: "Written by ",
+            text: "The Massacre of the Innocents is a fresco (200x185 cm) by Giotto, datable to around 1303-1305 which is part of the cycle of the Scrovegni Chapel in Padua. Located on the right wall looking towards the altar, it is included in the Stories of Jesus in the upper central register.<br>The scene, of raw realism, is one of the most dramatic of the cycle; tells of a biblical episode, the massacre of the innocents, ordered by King Herod to attempt the murder of Jesus.<br>As in other scenes in the cycle, the architecture of the background helps to define the groups of figures and facilitates the reading of the scene.<br>Above left, from a covered balcony, Herod, extending his arm, gives the command to kill all the children born in the last months. It is addressed to desperate mothers, grouped behind a building with a central plan, who are seen snatching their children from soldiers, who are portrayed armed, in dramatic poses and in dark colors.<br>Below are already the massed bodies of numerous children, who almost seem to pass beyond the frame of the fresco to concentrate attention elsewhere. Finally, on the left, some spectators show all their disturbance by lowering their heads and making resigned expressions.<br>The children are bigger than normal, probably to make them the protagonists of the scene. The mothers have deeply distressed expressions, (feeling that prevails) with the mouth parted in a common lament and the cheeks streaked with tears, as re-emerged with the last restoration.<br>As in other scenes on this side of the wall (the blue of lapis lazuli, probably dry laid) it is damaged in several places by scratches and drops of color, in the sky as in the dress of the woman on the right.",
+            author: "Written by Benedetta Martinelli",
             audioAuthor: "Voice of Greta Beraldo"
         }
     },
