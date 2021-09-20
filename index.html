@@ -29,16 +29,32 @@
          </div>
       </div>
    </div>
-
-   <!--
-      <div id="home" class="home">
-      <div id="homeTitle">La Cappella degli Scrovegni</div>
-      <input type="button" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
-   </div>
-   -->
    
    <div id="indoor" class="indoor"></div>
 
+   <div id="description" class="description">
+      <div id="heading">
+         <div id="headingContainer">
+            <div id="headingSubtitle" class="headingTitle"></div>
+            <div id="headingTitle" class="headingTitle"></div>
+         </div>
+         <div class="container-bottoni">
+            <button id="play" class="play"><i class="fas fa-play"></i></button>
+            <button id="pause" class="pause"><i class="fas fa-pause"></i></button>
+            <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
+         </div>
+      </div>
+      <div class="body-desc" id="bodyDesc">
+         <div class="image-container">
+            <div class="poster1">
+               <img id="img" class="img" src="" alt=""/>
+            </div>
+         </div>
+         <div id="text" class="text"></div>
+      </div>
+  </div>
+
+   <!--
    <div id="description" class="description">
       <div id="heading">
          <button id="play" class="play"><i class="fas fa-play"></i></button>
@@ -58,7 +74,8 @@
          </div>
          <div id="text" class="text"></div>
       </div>
-  </div>
+  </div>-->
+
   <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
    
   <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
