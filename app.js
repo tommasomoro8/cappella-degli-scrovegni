@@ -63,7 +63,7 @@ langButton.addEventListener('click', changeLang)
 changeLang()
 
 function changeMode(to) {
-  switch (to) {
+  /*switch (to) {
     case "toDark":
       lightMode.style.display = "none"
       darkMode.style.display = "flex"
@@ -72,7 +72,6 @@ function changeMode(to) {
       description.style.backgroundColor= "black";
       description.style.color = "#eeeeee"
       headingTitle.style.color = "#bbbbbb"
-      headingSpace.style.color = "#bbbbbb"
       headingSubtitle.style.color = "#bbbbbb"
 
       break;
@@ -85,11 +84,10 @@ function changeMode(to) {
       description.style.backgroundColor= "#ffffff";
       description.style.color = "black"
       headingTitle.style.color = "#333333"
-      headingSpace.style.color = "#333333"
       headingSubtitle.style.color = "#333333"
 
       break;
-  }
+  }*/
 }
 
 function checkTime() {
