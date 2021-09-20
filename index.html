@@ -18,8 +18,24 @@
 
    <div id="home" class="home">
       <div id="homeTitle">La Cappella degli Scrovegni</div>
-      <input type="button" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
+      <input type="button" id="bottone" class="bottone" onclick="goIndoor()" value="Vai alla vista 3d" />
    </div>
+
+   <!--provvisorio-->
+   <div id="reportProblem" class="reportProblem" style="display: none;">
+      <div id="homeTitle">Segnala un problema</div>
+      <div class="problemDiv">
+         <input type="text" id="problemEmail" placeholder="your email"/>
+         <textarea id="problemDescription" placeholder="description"></textarea>
+         <div class="row" style="color: white;">
+            <input type="checkbox" id="problemReplay" checked/>
+            <div>Vorrai essere ricontattato?</div>
+         </div>
+         <button id="problemButton">invia</button>
+         <div id="problemStatus"></div>
+      </div>
+   </div>
+   <!--funo a qui-->
    
    <div id="indoor" class="indoor"></div>
 
@@ -52,7 +68,6 @@
      <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
      <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
   </div>
-   
 
   <script src="libraries/three.js"></script>
   <script src="libraries/OrbitControls.js"></script>
@@ -71,6 +86,8 @@
      goHome()
    })
   </script>
+
+  <script type="module" src="firebase.js"></script>
    
   <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
 </body>
