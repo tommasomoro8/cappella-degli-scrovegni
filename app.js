@@ -7,7 +7,6 @@ function preloadImages(callback) {
     img.src = imageSrc
     img.onload = () => {
       imagesLoaded++
-      animateProgressBar(imagesLoaded)
       if (imagesLoaded === 64) callback()
     }
   }
@@ -17,15 +16,9 @@ function preloadImages(callback) {
     img.src = "img/" + i + ".png"
     img.onload =() => {
       imagesLoaded++
-      animateProgressBar(imagesLoaded)
       if (imagesLoaded === 64) callback()
     }
   }
-}
-
-function animateProgressBar(imagesLoadedCount) {
-  var progress = imagesLoadedCount / 64 * 100
-  bar.style.width = progress + "%"
 }
 
 function goIndoor() {
@@ -79,7 +72,6 @@ function changeMode(to) {
       description.style.backgroundColor= "black";
       description.style.color = "#eeeeee"
       headingTitle.style.color = "#bbbbbb"
-      headingSpace.style.color = "#bbbbbb"
       headingSubtitle.style.color = "#bbbbbb"
 
       break;
@@ -92,7 +84,6 @@ function changeMode(to) {
       description.style.backgroundColor= "#ffffff";
       description.style.color = "black"
       headingTitle.style.color = "#333333"
-      headingSpace.style.color = "#333333"
       headingSubtitle.style.color = "#333333"
 
       break;
