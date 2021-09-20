@@ -56,10 +56,43 @@
       </div>
   </div>
 
+   <div class="modal" id="modal">
+      <div class="modal-header">
+          <div class="title" id="titolo-contattaci">About us</div>
+          <button data-close-button class="close-button" onclick="closeModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+         <div class="titolo-desc">
+            Programmatori
+         </div>
+         <div id="creatori-del-sito" class="prima-desc">
+            <span>Tommaso Moro</span> <br>
+            Ivan Lomaka
+         </div>
+         <div class="titolo-desc">
+            Lettrici
+         </div>
+         <div id="creatori-del-sito" class="prima-desc">
+            <span>Ginevra Taddei (italiano)</span> <br>
+            Greta Beraldo (inglese)
+         </div>
+         <div class="titolo-desc">
+            Ricerche sulle opere
+         </div>
+         <div id="creatori-del-sito" class="prima-desc">
+            Vedi fondo opera
+         </div>
+      </div>
+   </div>
+
+   <div id="overlay"></div>
+
+
+
   <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
    
   <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
-  <button id="contactsButton" class="contactsButton" onclick="openContacts()"><i class="fas fa-id-card"></i></button>
+  <button id="contactsButton" class="contactsButton" onclick="openModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-id-card"></i></button>
   <div id="rightButton">
      <button id="darkMode" class="darkModeButton" onclick="changeMode('toLight')"><i class="far fa-lightbulb"></i></button>
      <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>

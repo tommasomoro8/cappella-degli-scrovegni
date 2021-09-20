@@ -152,6 +152,8 @@ function openModal(modal, overlay) {
   overlay.classList.add('active')
 }
 
+overlay.addEventListener('click', () => {closeModal(modal, overlay)})
+
 function closeModal(modal, overlay) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
