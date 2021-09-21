@@ -58,29 +58,43 @@
 
    <div class="modal" id="modal">
       <div class="modal-header">
-          <div class="title" id="titolo-contattaci">About us</div>
+          <div class="title" id="titolo-contattaci">Contattaci</div>
           <button data-close-button class="close-button" onclick="closeModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-times"></i></button>
       </div>
-      <div class="modal-body" id="modal-body">
-         <div class="titolo-desc">
-            Programmatori
+      <div class="domande" id="voto">
+         <div class="sottotitolo-domande">Dai un voto al nostro sito</div>
+         <div class="riga-domande">
+            <button id="1-val" data-domande-sito>1</button>
+            <button id="2-val" data-domande-sito>2</button>
+            <button id="3-val" data-domande-sito>3</button>
+            <button id="4-val" data-domande-sito>4</button>
+            <button class="button-active" id="5-val-" data-domande-sito>5</button>
          </div>
-         <div id="creatori-del-sito" class="prima-desc">
-            <span>Tommaso Moro</span> <br>
-            Ivan Lomaka
+      </div>
+      <div class="domande" id="form">
+         <div class="sottotitolo-domande">Scrivici un messaggio</div>
+         <div class="form-wrapper">
+            <textarea placeholder="Scrivi qui i tuoi consigli / domande" id="messaggio-utente"></textarea>
          </div>
-         <div class="titolo-desc">
-            Lettrici
+         <div class="sottotitolo-domande">Lasciaci la tua e-mail</div>
+         <div class="form-wrapper">
+            <input type="text" id="e-mail-holder" placeholder="Scrivi qui la tua e-mail">
          </div>
-         <div id="creatori-del-sito" class="prima-desc">
-            <span>Ginevra Taddei (italiano)</span> <br>
-            Greta Beraldo (inglese)
+         <div class="invia">
+            <button id="invia-messaggio">Invia</button>
          </div>
-         <div class="titolo-desc">
-            Ricerche sulle opere
-         </div>
-         <div id="creatori-del-sito" class="prima-desc">
-            Vedi fondo opera
+      </div>
+      <div class="domande" id="form" style="text-align: center;">
+         <div class="sottotitolo-domande">Creatori del sito</div>
+         <div class="icon-wrapper">
+            <div class="git-wrap">
+               <a href="https://github.com/IvanLomaka"><i class="fab fa-github fa-2x"></i></a>
+               <div>Lomaka Ivan</div>
+            </div>
+            <div class="git-wrap">
+               <a href="https://github.com/tommasomoro8"><i class="fab fa-github fa-2x"></i></a>
+               <div>Moro Tommaso</div>
+            </div>
          </div>
       </div>
    </div>
@@ -112,7 +126,8 @@
 
   <script src="app.js"></script>
   <script src="render.js"></script>
-  <script src="/utils/animazione.js"></script>
+  <script src="utils/animazione.js"></script>
+  <script src="utils/form.js"></script>
 
   <script>
    preloadImages(() => {

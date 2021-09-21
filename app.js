@@ -63,6 +63,7 @@ langButton.addEventListener('click', changeLang)
 changeLang()
 
 function changeMode(to) {
+  /*
   switch (to) {
     case "toDark":
       lightMode.style.display = "none"
@@ -87,7 +88,7 @@ function changeMode(to) {
       headingSubtitle.style.color = "#333333"
 
       break;
-  }
+  }*/
 }
 
 function checkTime() {
