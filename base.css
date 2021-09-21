@@ -49,7 +49,7 @@ div {
     width: 100vw;
     height: 100vh;
     background-color: #353839;
-    display: none; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
+    display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
 }
 
       /*provvisorio*/
@@ -466,6 +466,70 @@ div {
     flex-direction: column;
 }
 
+            /* provvisorio */
+
+            .home-container {
+                margin: auto;
+                text-align: left;
+                color: white;
+            }
+
+            .homeTitle {
+                font-weight: bold;
+                font-size: 5vw;
+                overflow: hidden;
+                background-color: #353839;
+            }
+
+            .homeTitle span {
+                transform: translateY(100%);
+                display: inline-block;
+            }
+
+            .homesubtitle {
+                width: 60%;
+                border-top: solid 2px white;
+                margin-top: 5px;
+                padding-top: 5px;
+                font-size: 2vw;
+                overflow: hidden;
+            }
+
+            .homesubtitle span {
+                transform: translateY(-100%);
+                display: inline-block;
+            }
+
+            .button-container {
+                margin-top: 2vh;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            #home-button {
+                font-size: 2vw;
+                border-radius: 30px;
+                border: none;
+                height: 3.5vw;
+                width: 15%;
+                background-color: white;
+                color: black;
+                transition: 0.5s ease-in-out;
+                opacity: 0;
+            }
+
+            #home-button:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            .home-down {
+                background-color: #353839;
+            }
+
+            /* fino a qui */
+
 .noscript {
     background-color: white;
     color: black;
@@ -479,67 +543,4 @@ div {
     right: 0;
     z-index: 100;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-
-/* new home css */
-
-.home-container {
-    margin: auto;
-    text-align: left;
-    color: white;
-}
-
-.homeTitle {
-    font-weight: bold;
-    font-size: 5vw;
-    overflow: hidden;
-    background-color: #353839;
-}
-
-.homeTitle span {
-    transform: translateY(100%);
-    display: inline-block;
-}
-
-.homesubtitle {
-    width: 60%;
-    border-top: solid 2px white;
-    margin-top: 5px;
-    padding-top: 5px;
-    font-size: 2vw;
-    overflow: hidden;
-}
-
-.homesubtitle span {
-    transform: translateY(-100%);
-    display: inline-block;
-}
-
-.button-container {
-    margin-top: 2vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
-
-#home-button {
-    font-size: 2vw;
-    border-radius: 30px;
-    border: none;
-    height: 3.5vw;
-    width: 15%;
-    background-color: white;
-    color: black;
-    transition: 0.5s ease-in-out;
-    opacity: 0;
-}
-
-#home-button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.home-down {
-    background-color: #353839;
 }
