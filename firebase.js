@@ -15,7 +15,7 @@ const app = initializeApp({
 // analytics
 const analytics = getAnalytics(app)
 
-home-button.addEventListener('click', () => {
+document.getElementById("home-button").addEventListener('click', () => {
     logEvent(analytics, "go_indoor")
 })
 
