@@ -11,6 +11,7 @@
 </head>
 <body>
    
+  <!--provvisorio-->
    <div id="home" class="home">
       <div class="home-container">
          <div class="home-up">
@@ -22,16 +23,32 @@
             <div id="homesubtitle" class="homesubtitle">
                <span class="ani-bottom">Patrimonio dell'UNESCO dal 2021</span>
             </div>
-            <div class="button-container">
+            <div class="button-container" style="margin-top: 60px;">
                <button id="home-button" onclick="goIndoor()">Entra</button>
             </div>
          </div>
       </div>
    </div>
+
+   
+   <div id="reportProblem" class="reportProblem" style="display: none;">
+      <div id="homeTitle">Segnala un problema</div>
+      <div class="problemDiv">
+         <input type="text" id="problemEmail" placeholder="your email"/>
+         <textarea id="problemDescription" placeholder="description"></textarea>
+         <div class="row" style="color: white;">
+            <input type="checkbox" id="problemReplay" checked/>
+            <div>Vorrai essere ricontattato?</div>
+         </div>
+         <button id="problemButton">invia</button>
+         <div id="problemStatus"></div>
+      </div>
+   </div>
+   <!--funo a qui-->
    
    <div id="indoor" class="indoor"></div>
 
-   <div id="description" class="description">
+  <div id="description" class="description">
       <div id="heading">
          <div id="headingContainer">
             <div id="headingSubtitle" class="headingTitle"></div>
@@ -39,7 +56,7 @@
          </div>
          <div class="container-bottoni">
             <button id="play" class="play"><i class="fas fa-play"></i></button>
-            <button id="pause" class="pause"><i class="fas fa-pause"></i></button>
+            <button id="stopp" class="stop"><i class="fas fa-stop"></i></button>
             <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
          </div>
       </div>
@@ -76,9 +93,11 @@
   <script src="libraries/threex.domevents.js"></script>
   <script src="libraries/Tween.js"></script>
 
+  <script src="data.js"></script>
   <script src="app.js"></script>
   <script src="render.js"></script>
-  <script src="/utils/animazione.js"></script>
+  <script src="animations.js"></script>
+  <script type="module" src="firebase.js"></script>
 
   <script>
    preloadImages(() => {
@@ -86,7 +105,7 @@
       //abilita il bottone per passare all'interno
    })
   </script>
-   
+
   <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
 </body>
 </html>

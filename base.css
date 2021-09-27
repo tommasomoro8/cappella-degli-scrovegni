@@ -52,6 +52,57 @@ div {
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
 }
 
+      /*provvisorio*/
+
+      .reportProblem {
+          width: 100vw;
+          height: 100vh;
+          background-color: black;
+          position: fixed;
+          top: 0;
+          left: 0;
+      }
+
+      .problemDiv {
+          display: flex;
+          flex-direction: column;
+          width: 10vh;
+          margin-left: 45vh;
+      }
+
+      #problemDescription {
+          width: 14vw;
+          height: 10vh;
+          margin-top: 2vh;
+      }
+
+      #problemEmail {
+          width: 14vw;
+          height: 2vh;
+          margin-top: 2vh;
+      }
+
+      #problemButton {
+          width: 14vw;
+          height: 2vh;
+          margin-top: 2vh;
+      }
+
+      #problemStatus {
+          color: white;
+          margin-top: 2vw;
+      }
+
+      #homeTitle {
+          color: white;
+          font-weight: bold;
+          font-size: 50px;
+          text-shadow: 2px 2px 5px rgb(87, 87, 87);
+      }
+
+
+      /*fino a qui*/
+
 .description {
     display: flex;
     flex-direction: column;
@@ -102,11 +153,11 @@ div {
     color: #e9e9e9;
 }
 
-.fa-pause {
+.fa-stop {
     transition: 0.52s ease-in-out;
 }
 
-.fa-pause:hover {
+.fa-stop:hover {
     color: #e9e9e9;
 }
 
@@ -129,7 +180,7 @@ div {
     margin: none;
 }
 
-.pause {
+.stop {
     width: 4vw;
     height: 4vw;
     font-size: 3.8vh;
@@ -302,7 +353,7 @@ div {
         font-size: 3.8vw;
     }
 
-    .pause {
+    .stop {
         font-size: 3.8vw;
     }
     
@@ -415,6 +466,70 @@ div {
     flex-direction: column;
 }
 
+            /* provvisorio */
+
+            .home-container {
+                margin: auto;
+                text-align: left;
+                color: white;
+            }
+
+            .homeTitle {
+                font-weight: bold;
+                font-size: 5vw;
+                overflow: hidden;
+                background-color: #353839;
+            }
+
+            .homeTitle span {
+                transform: translateY(100%);
+                display: inline-block;
+            }
+
+            .homesubtitle {
+                width: 60%;
+                border-top: solid 2px white;
+                margin-top: 5px;
+                padding-top: 5px;
+                font-size: 2vw;
+                overflow: hidden;
+            }
+
+            .homesubtitle span {
+                transform: translateY(-100%);
+                display: inline-block;
+            }
+
+            .button-container {
+                margin-top: 2vh;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+
+            #home-button {
+                font-size: 2vw;
+                border-radius: 30px;
+                border: none;
+                height: 3.5vw;
+                width: 15%;
+                background-color: white;
+                color: black;
+                transition: 0.5s ease-in-out;
+                opacity: 0;
+            }
+
+            #home-button:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            .home-down {
+                background-color: #353839;
+            }
+
+            /* fino a qui */
+
 .noscript {
     background-color: white;
     color: black;
@@ -428,77 +543,4 @@ div {
     right: 0;
     z-index: 100;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* home css */
-
-
-.home-container {
-    margin: auto;
-    text-align: left;
-    color: white;
-}
-
-.homeTitle {
-    font-weight: bold;
-    font-size: 5vw;
-    overflow: hidden;
-    background-color: #353839;
-}
-
-.homeTitle span {
-    transform: translateY(100%);
-    display: inline-block;
-}
-
-.homesubtitle {
-    width: 60%;
-    border-top: solid 2px white;
-    margin-top: 5px;
-    padding-top: 5px;
-    font-size: 2vw;
-    overflow: hidden;
-}
-
-.homesubtitle span {
-    transform: translateY(-100%);
-    display: inline-block;
-}
-
-.button-container {
-    margin-top: 2vh;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-}
-
-#home-button {
-    font-size: 2vw;
-    border-radius: 30px;
-    border: none;
-    height: 3.5vw;
-    width: 15%;
-    background-color: white;
-    color: black;
-    transition: 0.5s ease-in-out;
-    opacity: 0;
-}
-
-#home-button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-}
-
-.home-down {
-    background-color: #353839;
 }
