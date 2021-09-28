@@ -26,6 +26,8 @@ function goIndoor() {
   contactsButton.style.display = "none";
   indoor.style.display = "flex";
   backHomeButton.style.display = "flex";
+  document.body.style.overflowY = "hidden"
+  animate()
   camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
 }
 
@@ -38,6 +40,13 @@ function goHome() {
   contactsButton.style.display = "flex";
   rightButton.style.display = "flex";
   home.style.display = "flex";
+  document.body.style.overflowY = "scroll"
+  for (i = 1; i <= 5; i++)
+    document.getElementById("text"+i).className = "homeText t"+i
+  text1.classList.add("fromtop")
+  animateHome()
+  home.scrollTop = 0
+  moveCamera()
 }
 
 var language = "EN"
@@ -46,18 +55,37 @@ function changeLang() {
   stopAudio()
   if (language == "IT") {
     language = "EN";
-    document.title = "The Scrovegni Chapel";
+    if (document.title != "Loading...")
+      document.title = "The Scrovegni Chapel";
     img.alt = "Failed to load image"
-  }
-  else if (language == "EN") {
+    homeArrowText.innerText = "Scroll"
+
+    text1.innerHTML = "Scrovegni<br>&nbsp;&nbsp;Chapel"
+    text2.innerHTML = "Frescoed<br>&nbsp;&nbsp;by Giotto"
+    text3.innerHTML = "Built in<br>&nbsp;&nbsp;Padua in 1300"
+    text4.innerHTML = "UNESCO World&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;Heritage Site&nbsp;&nbsp;&nbsp;&nbsp;"
+    document.getElementById("text5").innerHTML = "Click to<br>&nbsp;&nbsp;explore inside"
+
+  } else if (language == "EN") {
     language = "IT";
-    document.title = "Cappella Degli Scrovegni";
+    if (document.title != "Loading...")
+      document.title = "Cappella Degli Scrovegni";
     img.alt = "Impossibile caricare l'immagine"
-  };
+    homeArrowText.innerText = "Scorri"
+
+    text1.innerHTML = "Cappella<br>&nbsp;&nbsp;degli Scrovegni"
+    text2.innerHTML = "Affrescata<br>&nbsp;&nbsp;da Giotto"
+    text3.innerHTML = "Costruita a<br>&nbsp;&nbsp;Padova nel 1300"
+    text4.innerHTML = "Patrimonio dell'<br>&nbsp;&nbsp;UNESCO dal 2021"
+    document.getElementById("text5").innerHTML = "Clicca per<br>&nbsp;&nbsp;esplorare l'interno"
+
+  }
   langImg.src = "system/" + language + ".png";
   if (descriptionOpen) {
     openDescription(currentPoint)
   };
+
+  
 }
 langButton.addEventListener('click', changeLang)
 
@@ -108,13 +136,10 @@ var audio
 function startAudio() {
   play.style.display = "none"
   stopp.style.display = "flex"
-  if (language == "IT") {
-    console.error("nessuna traccia audio presente")
-    stopAudio()
-    return
-  } else {
+  if (language == "IT")
+    audio = new Audio("audio/" + (currentPoint+1)+ ".m4a")
+  else
     audio = new Audio("audio/" + (currentPoint+1)+ "EN.m4a")
-  }
   audio.play()
   audio.addEventListener('ended', stopAudio)
 }
