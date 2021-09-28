@@ -42,19 +42,18 @@ controls.maxDistance = 5;
 
 /*Animate*/
 function animate() {
+  if (indoor.style.display == "" || indoor.style.display == "none") return
   TWEEN.update();
   requestAnimationFrame(animate);
   render.render(scene, camera);
   controls.update();
-}
-animate();
+}; animate();
 
 function WindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   render.setSize(window.innerWidth, window.innerHeight);
-}
-WindowResize();
+}; WindowResize();
 
 window.addEventListener('resize', () => {
   WindowResize();

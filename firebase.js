@@ -15,9 +15,9 @@ const app = initializeApp({
 // analytics
 const analytics = getAnalytics(app)
 
-document.getElementById("home-button").addEventListener('click', () => {
-    logEvent(analytics, "go_indoor")
-})
+//document.getElementById("home-button").addEventListener('click', () => {
+    //logEvent(analytics, "go_indoor")
+//})
 
 langButton.addEventListener('click', () => {
     logEvent(analytics, "change_lang", {
@@ -48,6 +48,7 @@ async function newError(email, description, replay) {
 }
 
 //provvisorio
+/*
 
 problemButton.addEventListener('click', async () => {
     const result = await newError(problemEmail.value, problemDescription.value, problemReplay.checked)
@@ -60,5 +61,5 @@ problemButton.addEventListener('click', async () => {
         problemStatus.innerHTML = "scusaci :( La tua segnalazione non è andata a buon fine, ti chiediamo di ritentare più tardi"
     }
 })
-
+*/
 //fino a qui

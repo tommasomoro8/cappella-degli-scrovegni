@@ -1,3 +1,41 @@
+const scrollData = [
+    {// scene 0
+        posX: 20,
+        posY: 10,
+        posZ: 40,
+        rotX: 0,
+        rotY: 1
+    },
+    {// scene 1
+        posX: -12,
+        posY: 10,
+        posZ: 40,
+        rotX: 0,
+        rotY: -0.8
+    },
+    {// scene 2
+        posX: 15,
+        posY: 10,
+        posZ: 40,
+        rotX: 0,
+        rotY: 0.9
+    },
+    {// scene 3
+        posX: -20,
+        posY: 10,
+        posZ: 40,
+        rotX: 0,
+        rotY: -1
+    },
+    {// scene 4
+        posX: 25,
+        posY: 20,
+        posZ: 60,
+        rotX: 0,
+        rotY: 0.9
+    }
+]
+
 const data = [
     {
         position: {
