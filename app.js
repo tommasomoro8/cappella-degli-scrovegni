@@ -42,8 +42,8 @@ function goHome() {
   home.style.display = "flex";
   document.body.style.overflowY = "scroll"
   for (i = 1; i <= 5; i++)
-    document.getElementById("text"+i).className = "homeText t"+i
-  text1.classList.add("fromtop")
+    document.getElementById("homeText"+i).className = "homeText t"+i
+  homeText1.classList.add("fromtop")
   animateHome()
   home.scrollTop = 0
   moveCamera()
@@ -60,11 +60,11 @@ function changeLang() {
     img.alt = "Failed to load image"
     homeArrowText.innerText = "Scroll"
 
-    text1.innerHTML = "Scrovegni<br>&nbsp;&nbsp;Chapel"
-    text2.innerHTML = "Frescoed<br>&nbsp;&nbsp;by Giotto"
-    text3.innerHTML = "Built in<br>&nbsp;&nbsp;Padua in 1300"
-    text4.innerHTML = "UNESCO World&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;Heritage Site&nbsp;&nbsp;&nbsp;&nbsp;"
-    document.getElementById("text5").innerHTML = "Click to<br>&nbsp;&nbsp;explore inside"
+    homeText1.innerHTML = "Scrovegni<br>&nbsp;&nbsp;Chapel"
+    homeText2.innerHTML = "Frescoed<br>&nbsp;&nbsp;by Giotto"
+    homeText3.innerHTML = "Built in<br>&nbsp;&nbsp;Padua in 1300"
+    homeText4.innerHTML = "UNESCO World&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;Heritage Site&nbsp;&nbsp;&nbsp;&nbsp;"
+    homeText5.innerHTML = "Click to<br>&nbsp;&nbsp;explore inside"
 
   } else if (language == "EN") {
     language = "IT";
@@ -73,19 +73,21 @@ function changeLang() {
     img.alt = "Impossibile caricare l'immagine"
     homeArrowText.innerText = "Scorri"
 
-    text1.innerHTML = "Cappella<br>&nbsp;&nbsp;degli Scrovegni"
-    text2.innerHTML = "Affrescata<br>&nbsp;&nbsp;da Giotto"
-    text3.innerHTML = "Costruita a<br>&nbsp;&nbsp;Padova nel 1300"
-    text4.innerHTML = "Patrimonio dell'<br>&nbsp;&nbsp;UNESCO dal 2021"
-    document.getElementById("text5").innerHTML = "Clicca per<br>&nbsp;&nbsp;esplorare l'interno"
+    homeText1.innerHTML = "Cappella<br>&nbsp;&nbsp;degli Scrovegni"
+    homeText2.innerHTML = "Affrescata<br>&nbsp;&nbsp;da Giotto"
+    homeText3.innerHTML = "Costruita a<br>&nbsp;&nbsp;Padova nel 1300"
+    homeText4.innerHTML = "Patrimonio dell'<br>&nbsp;&nbsp;UNESCO dal 2021"
+    homeText5.innerHTML = "Clicca per<br>&nbsp;&nbsp;esplorare l'interno"
 
   }
+
+  changeFormLang()
+
   langImg.src = "system/" + language + ".png";
   if (descriptionOpen) {
     openDescription(currentPoint)
   };
 
-  
 }
 langButton.addEventListener('click', changeLang)
 
@@ -164,16 +166,16 @@ function openDescription(point) {
   openModal(description, backDescription)
 
   bodyDesc.scrollTop = 0;
-  text.scrollTop = 0;
+  document.getElementById("text").scrollTop = 0;
 }
 
 function updateDescription(point) {
   img.src = "img/" + (point+1)+ ".png"
   headingTitle.innerHTML = data[point].title
   headingSubtitle.innerHTML = data[point].subtitle
-  text.innerHTML = data[point][language].text
-  //autore testo  data[point][language].textAuthor
-  //autore audio  data[point][language].audioAuthor
+  document.getElementById("text").innerHTML = data[point][language].text
+  document.getElementById("autore-descrizione").innerText = data[point][language].textAuthor
+  document.getElementById("autore-audio").innerText = data[point][language].audioAuthor
 }
 
 function closeDescription() {

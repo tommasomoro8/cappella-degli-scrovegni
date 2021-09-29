@@ -4,9 +4,9 @@ const sceneHome = new THREE.Scene();
 
 /*Camera*/
 const cameraHome = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000.0)
-cameraHome.position.setX(scrollData[0].posX);
-cameraHome.position.setY(scrollData[0].posY);
-cameraHome.position.setZ(scrollData[0].posZ);
+cameraHome.position.x = scrollData[0].posX;
+cameraHome.position.y = scrollData[0].posY;
+cameraHome.position.z = scrollData[0].posZ;
 cameraHome.rotation.y = scrollData[0].rotY;
 
 
@@ -106,11 +106,11 @@ function moveCamera() {
   }
 
   text("homeArrow", 0, 0.3)
-  text("text1", 0, 3.28)
-  text("text2", 16.7, 32)
-  text("text3", 43.5, 56.2)
-  text("text4", 72, 80)
-  text("text5", 95, 100)
+  text("homeText1", 0, 3.28)
+  text("homeText2", 16.7, 32)
+  text("homeText3", 43.5, 56.2)
+  text("homeText4", 72, 80)
+  text("homeText5", 95, 100)
 
   var ifnum = Math.trunc(scrollPercent/25)
   
@@ -140,7 +140,7 @@ function checkHomePointer() {
 }
 
 document.body.onload = () => {
-  text1.classList.add("fromtop")
+  homeText1.classList.add("fromtop")
   homeArrow.classList.add("fromtop")
 }
 
@@ -168,6 +168,7 @@ function text(textId, scrollStart, scrollStop) {
 /*Animate*/
 function animateHome() {
   if (home.style.display == "none") return
+  //TWEEN.update();
   requestAnimationFrame(animateHome);
   renderHome.render(sceneHome, cameraHome);
 }; animateHome();
@@ -181,3 +182,28 @@ function WindowResizeHome() {
 window.addEventListener('resize', () => {
   WindowResizeHome();
 }, false);
+
+/*const delay = ms => new Promise(res => setTimeout(res, ms));
+
+async function firstAnimation() {
+  document.body.style.overflowY = "hidden"
+
+  await delay(5000)
+
+  var from = {x: scrollData[0].posX, y: scrollData[0].posY, z: scrollData[0].posZ}
+  var to = {x: scrollData[0].posX, y: scrollData[0].posY, z: scrollData[0].posZ}
+
+  new TWEEN.Tween(from)
+    .to(to,3000)
+    .easing(TWEEN.Easing.Exponential.Out)
+    .onUpdate(function () {
+      cameraHome.position.set(this.x, this.y, this.z);
+    })
+    .onComplete(function () {
+      homeText1.classList.add("fromtop")
+      homeArrow.classList.add("fromtop")
+      document.body.style.overflowY = "scroll"
+    })
+    .start();
+}
+firstAnimation()*/

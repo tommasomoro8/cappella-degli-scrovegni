@@ -161,7 +161,6 @@ div {
     align-items: center; 
     align-content: center;
     overflow : hidden;
-    height: 79vh;
     width: 80vw;
     color: rgb(0, 0, 0);
     background-color: #ffffff;
@@ -171,6 +170,11 @@ div {
     position: fixed;
     top: 50%;
     left: 50%;
+}
+
+#description {
+    overflow-x: hidden;
+    padding-bottom: 30px;
 }
 
 .description.active {
@@ -209,11 +213,11 @@ div {
     user-select: text;
 }
 
-#headingTitle {
+#headingSubtitle {
     font-size: 4vh;
 }
 
-#headingSubtitle {
+#headingTitle {
     font-size: 5vh;
 }
 
@@ -234,6 +238,13 @@ div {
     font-family: "Roboto", sans-serif;
     font-size: 22px;
     text-align: justify;
+    overflow-x: hidden;
+}
+
+
+#text5 {
+    padding-right: 10px;
+    overflow-x: hidden;
 }
 
 .text {
@@ -245,6 +256,7 @@ div {
     padding-top: 0;
     margin-top: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-user-select: text; 
     -moz-user-select: text; 
     -ms-user-select: text; 
@@ -257,6 +269,7 @@ div {
     width: 30%;
     max-height: 60vh;
     margin-left: 0px;
+    margin-right: 20px;
     float: left;
 }
 
@@ -299,6 +312,17 @@ div {
     pointer-events: all;
 }
 
+#autori {
+    display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
+    color: rgb(122, 122, 122);
+}
+
+#autore-descrizione, #autore-audio {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
 @media (min-width: 10px) and (orientation:portrait) {
 
     .description {
@@ -332,11 +356,11 @@ div {
         padding-left: 1vw;
     }
     
-    #headingTitle {
+    #headingSubtitle {
         font-size: 4vw;
     }
     
-    #headingSubtitle {
+    #headingTitle {
         font-size: 5vw;
     }
 
@@ -435,6 +459,13 @@ div {
     margin: none;
 }
 
+@media (min-width: 10px) and (orientation:portrait) {
+    .close, .stop, .play {
+        width: 4vh;
+        height: 4vh;
+    }
+}
+
 .langButton {
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center;
     background: none; border: none;
@@ -518,6 +549,348 @@ div {
     display: flex;
     flex-direction: column;
 }
+
+/* open contacs modal */
+
+.modal {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    transform: translate(-200px, 200px) scale(0);
+    transition: 0.3s ease-in-out;
+    z-index: 20;
+    background-color: #ffffff;
+    width: 400px;
+    max-width: 60%;
+    overflow: hidden;
+    height: 37vh;
+}
+
+.modal.active {
+    transform: translate(0, 0) scale(1);
+}
+
+.modal-header {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid gray 1px;
+}
+
+.modal-header .title {
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.close-button {
+    font-size: 25px;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#overlay {
+    z-index: 19;
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.80);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.titolo-desc {
+    border-bottom: 1px solid gray;
+    font-size: 3vh;
+    width: 300px;
+    max-width: 70%;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.prima-desc {
+    text-align: left;
+    font-size: 2vh;
+}
+
+.prima-desc span{
+    margin-bottom: 15px;
+}
+
+.prima-desc a {
+    text-decoration: none;
+    color: black;
+}
+
+.domande {
+    margin: auto;
+    width: 90%;
+    text-align: left;
+}
+
+.sottotitolo-domande {
+    font-size: 2vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.riga-domande {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.riga-domande button {
+    height: 4vh;
+    border-radius: 10%;
+    border: none;
+    width: 18%;
+    transition: .2s ease-in-out;
+}
+
+.riga-domande button:hover {
+    background-color: rgb(179, 175, 175);
+}
+
+.button-active {
+    background-color: #32a852!important;
+}
+
+.form-wrapper {
+    width: 98%;
+}
+
+.form-wrapper textarea {
+    overflow: auto;
+    width: 100%;
+    height: 10vh;
+    resize: none;
+}
+ 
+.form-wrapper textarea:focus {
+    outline: none;
+}
+
+.form-wrapper input {
+    overflow: auto;
+    width: 100%;
+    height: 3vh;
+    resize: none;
+}
+ 
+.form-wrapper input:focus {
+    outline: none;
+}
+
+.invia {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.invia button {
+    height: 4vh;
+    border-radius: 10%;
+    border: none;
+    width: 20%;
+    background-color: #32a852;
+    transition: .2s ease-in-out;
+}
+
+.invia button:hover {
+    background-color: #2e9449;
+}
+
+.icon-wrapper {
+    width: 70%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    border-bottom: solid 1px gray;
+    padding-bottom: 10px;
+}
+
+.fa-github {
+    color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.fa-github:hover {
+    color: #2e9449;
+}
+
+.git-wrap div {
+    font-size: 1.5vh;
+}
+
+#form-testo {
+    position: absolute;
+    right: 100%;
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+#feedback-form {
+    position: absolute;
+    right: 100%;
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    transition: 0.5s;
+}
+
+.feedback-wrapper {
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+}
+
+.feedback-wrapper button {
+    margin-bottom: 1vh;
+    height: 5vh;
+    font-size: 2vh;
+    border: none;
+    width: 70%;
+    background-color: #32a852;
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+.feedback-wrapper button:hover {
+    background-color: #2e9449;
+}
+
+#indietro-crediti {
+    background-color: tomato;
+}
+
+#indietro-crediti:hover {
+    background-color: rgb(255, 86, 56);
+}
+
+#indietro-crediti-feedback {
+    background-color: tomato;
+}
+
+#indietro-crediti-feedback:hover {
+    background-color: rgb(255, 86, 56);
+}
+
+@media (max-height: 500px) and (orientation:landscape) {
+    .modal{
+        height: 70vh;
+    }
+
+    .sottotitolo-domande {
+        font-size: 2vw;
+    }
+
+    .git-wrap div {
+        font-size: 1.5vw;
+    }
+
+    .modal-header .title {
+        font-size: 3vw;
+    }
+
+    .feedback-wrapper button {
+        margin-bottom: 1vw;
+        height: 5vw;
+        font-size: 2vw;
+    }
+
+    .form-wrapper textarea {
+        height: 5vw;
+    }
+
+    .form-wrapper input {
+        height: 2vw;
+    }
+
+    .invia {
+        margin-top: 10px;
+    }
+
+    .invia button {
+        height: 4vw;
+    }
+
+    .riga-domande button {
+        height: 4vw;
+    }
+
+    .riga-domande {
+        padding-bottom: 5px;
+    }
+
+    #form-testo {
+        min-height: 50vh;
+    }
+
+    #feedback-form {
+        min-height: 50vh;
+    }
+}
+
+@media (min-width: 10px) and (orientation:portrait) {
+    .feedback-wrapper {
+        height: 15vh;
+    }
+
+    .form-wrapper textarea {
+        height: 7vh;
+    }
+
+    .invia button {
+        width: auto;
+    }
+}
+
+.whiteButton {
+    color: white;
+}
+
+.blackIshColor {
+    background-color: #606163;
+}
+
+/*
+nero per night-mode: #3c3d40
+bianco testo: #fff
+*/
 
 
  /*noscript*/
