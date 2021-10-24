@@ -30,16 +30,7 @@ div {
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: #d3d3d3;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #a09f9f;
+    display: none;
 }
 
 /*home*/
@@ -55,7 +46,7 @@ div {
     color: white;
     z-index: 10;
     width: 100vw;
-    height: 1000vh;
+    height: 5000px;
 }
 
 .homeText {

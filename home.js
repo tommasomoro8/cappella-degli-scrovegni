@@ -71,6 +71,31 @@ for (let i = 0; i < scrollData.length-1; i++) {
   })
 }
 
+const divHeight = 5000
+const gap = 0
+document.body.onscroll = () => {
+  console.log(document.documentElement["scrollTop"])
+
+  if (document.documentElement["scrollTop"] > divHeight/2 + gap)
+    console.warn("giu")
+  else if (document.documentElement["scrollTop"] < divHeight/2 - gap)
+    console.warn("su")
+
+  document.documentElement["scrollTop"] = divHeight/2
+}
+
+
+function moveCamera(time) {
+  cameraHome.position.x = time * coefficients[ifnum].posX + init.posX
+  cameraHome.position.y = time * coefficients[ifnum].posY + init.posY
+  cameraHome.position.z = time * coefficients[ifnum].posZ + init.posZ
+  cameraHome.rotation.x = time * coefficients[ifnum].rotX + init.rotX
+  cameraHome.rotation.y = time * coefficients[ifnum].rotY + init.rotY
+}
+
+
+
+/*
 var scrollPercent = 0
 var lastScrollPercent = 0
 
@@ -126,13 +151,13 @@ document.body.onscroll = moveCamera
 homeScroll.addEventListener('mousemove', checkHomePointer)
 document.addEventListener('scroll', checkHomePointer)
 homeScroll.addEventListener('click', () => {
-  if (scrollPercent > 80.5 /* && ha finito di caricare */) {
+  if (scrollPercent > 80.5) {
     goIndoor()
   }
 })
 
 function checkHomePointer() {
-  if (scrollPercent > 80.5 /* && ha finito di caricare */) {
+  if (scrollPercent > 80.5) {
     homeScroll.style.cursor = "pointer";
   } else {
     homeScroll.style.cursor = "default";
@@ -163,7 +188,7 @@ function text(textId, scrollStart, scrollStop) {
       document.getElementById(textId).classList.add("frombottom")
   }
 }
-
+*/
 
 /*Animate*/
 function animateHome() {
