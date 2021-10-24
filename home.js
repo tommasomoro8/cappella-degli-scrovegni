@@ -13,17 +13,15 @@ cameraHome.rotation.y = scrollData[0].rotY;
 /*Render*/
 const renderHome = new THREE.WebGLRenderer({
   canvas: document.getElementById("homeRender")
-});
+})
 renderHome.setPixelRatio(window.devicePixelRatio);
 renderHome.setSize(window.innerWidth, window.innerHeight);
 
-
-/*Geometries*/
 new THREE.ColladaLoader().load("render.dae", (result) => {
   let chapel = result.scene
   chapel.rotation.z = 64
   sceneHome.add(chapel)
-});
+})
 
 
 /*Light*/
@@ -106,14 +104,16 @@ function moveCamera() {
   }
 
   text("homeArrow", 0, 0.3)
-  text("homeText1", 0, 3.28)
+  text("homeText1", -10, 3.28)
   text("homeText2", 16.7, 32)
   text("homeText3", 43.5, 56.2)
   text("homeText4", 72, 80)
-  text("homeText5", 95, 100)
+  text("homeText5", 95, 200)
 
   var ifnum = Math.trunc(scrollPercent/25)
+
   
+  //cameraHome.rotation.x = Math.pow(scrollUsed, 1/3)
   cameraHome.position.x = scrollUsed * coefficients[ifnum].posX + init.posX
   cameraHome.position.y = scrollUsed * coefficients[ifnum].posY + init.posY
   cameraHome.position.z = scrollUsed * coefficients[ifnum].posZ + init.posZ
@@ -145,7 +145,7 @@ document.body.onload = () => {
 }
 
 function text(textId, scrollStart, scrollStop) {
-  if (scrollStart >= scrollStop) {console.error("Id: " + textId + " --> scrollStart is bigger than scrollStop --> " + scrollStart + " >= " + scrollStop); return}
+  if (scrollStart >= scrollStop) {console.error(`Id: ${textId} --> scrollStart is bigger than scrollStop --> ${scrollStart} >= ${scrollStop}`); return}
 
   if (scrollPercent < scrollStart) {
     if (document.getElementById(textId).classList.contains("fromtop"))
