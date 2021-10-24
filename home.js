@@ -71,27 +71,47 @@ for (let i = 0; i < scrollData.length-1; i++) {
   })
 }
 
+var attualScene = 0
+var isMoving = false
+
 const divHeight = 5000
 const gap = 0
-document.body.onscroll = () => {
-  console.log(document.documentElement["scrollTop"])
 
-  if (document.documentElement["scrollTop"] > divHeight/2 + gap)
-    console.warn("giu")
-  else if (document.documentElement["scrollTop"] < divHeight/2 - gap)
-    console.warn("su")
+document.body.onscroll = () => {
+  if (!isMoving) {
+    if (document.documentElement["scrollTop"] > divHeight/2 + gap && attualScene < 4) attualScene++
+    else if (document.documentElement["scrollTop"] < divHeight/2 - gap && attualScene > 0) attualScene--
+
+    //moveCamera(++attualScene)
+  }
 
   document.documentElement["scrollTop"] = divHeight/2
 }
 
+/*
+const init = scrollData[0]
+const ifnum = 1
 
-function moveCamera(time) {
+var time = 0
+
+function moveCamera() {
+  if (time == 0) {
+    isMoving = true
+  }
+  time += 1
   cameraHome.position.x = time * coefficients[ifnum].posX + init.posX
   cameraHome.position.y = time * coefficients[ifnum].posY + init.posY
   cameraHome.position.z = time * coefficients[ifnum].posZ + init.posZ
   cameraHome.rotation.x = time * coefficients[ifnum].rotX + init.rotX
   cameraHome.rotation.y = time * coefficients[ifnum].rotY + init.rotY
-}
+
+  if (time < 20) {
+    setTimeout(moveCamera, 10);
+    console.log([isMoving, attualScene])
+  } else {
+    isMoving = false
+  }
+}*/
 
 
 
