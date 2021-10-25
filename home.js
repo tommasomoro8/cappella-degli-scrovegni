@@ -55,48 +55,95 @@ function addStar() {
 
 /*Onscroll animations*/
 
-var coefficients = []
+var attualScene = 0, isMoving = false
 
-function findCoefficient(what, i) {
-  return (scrollData[i+1][what] - scrollData[i][what])/(25)
+function blockSroll(bool) {
+  if (bool) document.body.style.overflowY = "hidden"
+  else document.body.style.overflowY = "scroll"
 }
 
-for (let i = 0; i < scrollData.length-1; i++) {
-  coefficients.push({
-    posX: findCoefficient("posX", i),
-    posY: findCoefficient("posY", i),
-    posZ: findCoefficient("posZ", i),
-    rotX: findCoefficient("rotX", i),
-    rotY: findCoefficient("rotY", i)
-  })
+const divHeight = 5000, gap = 0
+var nextScene, startMs, inMs = 2000, callback
+
+var coefficient;
+function findCoefficient(what, start, finish) {
+  return (scrollData[finish][what] - scrollData[start][what])/(inMs)
 }
 
-var attualScene = 0
-var isMoving = false
-
-const divHeight = 5000
-const gap = 0
 
 document.body.onscroll = () => {
   if (!isMoving) {
-    if (document.documentElement["scrollTop"] > divHeight/2 + gap && attualScene < 4) attualScene++
-    else if (document.documentElement["scrollTop"] < divHeight/2 - gap && attualScene > 0) attualScene--
+    nextScene = attualScene
 
-    //moveCamera(++attualScene)
+    if (document.documentElement["scrollTop"] > divHeight/2 + gap && attualScene < 4)
+      nextScene++
+    else if (document.documentElement["scrollTop"] < divHeight/2 - gap && attualScene > 0)
+      nextScene--
+
+    if (nextScene != attualScene)
+      moveCamera()
   }
 
   document.documentElement["scrollTop"] = divHeight/2
 }
 
+function moveCamera() {
+  const start = (attualScene < nextScene) ? attualScene : nextScene,
+        finish = (attualScene > nextScene) ? attualScene : nextScene
+
+  coefficient = {
+    posX: findCoefficient("posX", start, finish),
+    posY: findCoefficient("posY", start, finish),
+    posZ: findCoefficient("posZ", start, finish),
+    rotX: findCoefficient("rotX", start, finish),
+    rotY: findCoefficient("rotY", start, finish)
+  };
+
+  startMs = undefined
+  isMoving = true
+  blockSroll(true)
+
+  window.requestAnimationFrame(animateMoveCamera)
+
+  callback = () => {
+    attualScene = nextScene
+    blockSroll(false)
+    isMoving = false
+  }
+}
+
+function animateMoveCamera(timestamp) {
+  if (startMs == undefined) startMs = timestamp
+
+  var ms = ((timestamp - startMs > inMs) ? inMs : timestamp - startMs) * ((attualScene < nextScene) ? 1 : -1)
+
+  console.log(ms, nextScene, attualScene)
+
+  cameraHome.position.x = ms * coefficient.posX + scrollData[attualScene].posX
+  cameraHome.position.y = ms * coefficient.posY + scrollData[attualScene].posY
+  cameraHome.position.z = ms * coefficient.posZ + scrollData[attualScene].posZ
+  cameraHome.rotation.x = ms * coefficient.rotX + scrollData[attualScene].rotX
+  cameraHome.rotation.y = ms * coefficient.rotY + scrollData[attualScene].rotY
+
+
+
+  if (Math.abs(ms) >= inMs)
+    callback()
+  else
+    window.requestAnimationFrame(animateMoveCamera)
+}
+
+//moveCamera(toScene, inTime, callback)
+
 /*
 const init = scrollData[0]
 const ifnum = 1
 
-var time = 0
-
-function moveCamera() {
+function moveCamera(time) {
   if (time == 0) {
     isMoving = true
+    blockSroll(true)
+    console.log("iniziato")
   }
   time += 1
   cameraHome.position.x = time * coefficients[ifnum].posX + init.posX
@@ -105,13 +152,20 @@ function moveCamera() {
   cameraHome.rotation.x = time * coefficients[ifnum].rotX + init.rotX
   cameraHome.rotation.y = time * coefficients[ifnum].rotY + init.rotY
 
-  if (time < 20) {
-    setTimeout(moveCamera, 10);
-    console.log([isMoving, attualScene])
+  if (time < 200) {
+    setTimeout(() => {
+      moveCamera(time)
+    }, 1);
   } else {
     isMoving = false
+    console.log("finito")
+    blockSroll(false)
   }
-}*/
+}
+
+*/
+
+
 
 
 
