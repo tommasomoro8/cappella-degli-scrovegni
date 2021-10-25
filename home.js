@@ -88,36 +88,33 @@ document.body.onscroll = () => {
 }
 
 function moveCamera() {
-  const start = (attualScene < nextScene) ? attualScene : nextScene,
-        finish = (attualScene > nextScene) ? attualScene : nextScene
-
   coefficient = {
-    posX: findCoefficient("posX", start, finish),
-    posY: findCoefficient("posY", start, finish),
-    posZ: findCoefficient("posZ", start, finish),
-    rotX: findCoefficient("rotX", start, finish),
-    rotY: findCoefficient("rotY", start, finish)
+    posX: findCoefficient("posX", attualScene, nextScene),
+    posY: findCoefficient("posY", attualScene, nextScene),
+    posZ: findCoefficient("posZ", attualScene, nextScene),
+    rotX: findCoefficient("rotX", attualScene, nextScene),
+    rotY: findCoefficient("rotY", attualScene, nextScene)
   };
 
   startMs = undefined
   isMoving = true
   blockSroll(true)
 
-  window.requestAnimationFrame(animateMoveCamera)
-
   callback = () => {
     attualScene = nextScene
     blockSroll(false)
     isMoving = false
   }
+
+  window.requestAnimationFrame(animateMoveCamera)
 }
 
 function animateMoveCamera(timestamp) {
   if (startMs == undefined) startMs = timestamp
 
-  var ms = ((timestamp - startMs > inMs) ? inMs : timestamp - startMs) * ((attualScene < nextScene) ? 1 : -1)
+  var ms = (timestamp - startMs > inMs) ? inMs : timestamp - startMs
 
-  console.log(ms, nextScene, attualScene)
+  //console.log(ms, nextScene, attualScene)
 
   cameraHome.position.x = ms * coefficient.posX + scrollData[attualScene].posX
   cameraHome.position.y = ms * coefficient.posY + scrollData[attualScene].posY
@@ -126,8 +123,7 @@ function animateMoveCamera(timestamp) {
   cameraHome.rotation.y = ms * coefficient.rotY + scrollData[attualScene].rotY
 
 
-
-  if (Math.abs(ms) >= inMs)
+  if (ms >= inMs)
     callback()
   else
     window.requestAnimationFrame(animateMoveCamera)
