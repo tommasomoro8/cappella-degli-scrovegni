@@ -17,9 +17,10 @@ const renderHome = new THREE.WebGLRenderer({
 renderHome.setPixelRatio(window.devicePixelRatio);
 renderHome.setSize(window.innerWidth, window.innerHeight);
 
-new THREE.ColladaLoader().load("render.dae", (result) => {
+new THREE.ColladaLoader().load("render/render.dae", (result) => {
   let chapel = result.scene
-  chapel.rotation.z = 64
+  //chapel.rotation.z = 64
+  chapel.rotation.z = Math.PI/2
   sceneHome.add(chapel)
 })
 
