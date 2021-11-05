@@ -17,10 +17,10 @@ const renderHome = new THREE.WebGLRenderer({
 renderHome.setPixelRatio(window.devicePixelRatio);
 renderHome.setSize(window.innerWidth, window.innerHeight);
 
-new THREE.ColladaLoader().load("render/render.dae", (result) => {
+new THREE.ColladaLoader().load("render.dae", (result) => {
   let chapel = result.scene
-  //chapel.rotation.z = 64
-  chapel.rotation.z = Math.PI/2
+  chapel.rotation.z = 64
+  //chapel.rotation.z = Math.PI/2
   sceneHome.add(chapel)
 })
 
@@ -56,7 +56,12 @@ function addStar() {
 
 /*Onscroll animations*/
 
-var attualScene = 0, isMoving = false
+function y(x) {
+  if (x < 0.00002) return 0
+  return ( ( Math.cbrt( Math.sqrt(3) * Math.sqrt( 27*Math.pow(x, 2) - 540*x + 2704 ) + 9*x - 90 ) ) / (Math.cbrt(2)*Math.pow(3, 2/3)) ) - ( (Math.cbrt(2/3)) / ( Math.cbrt( Math.sqrt(3) * Math.sqrt( 27*Math.pow(x, 2) - 540*x + 2704 ) + 9*x - 90 ) ) ) + 2
+  // x = (y-2)^3 + (y-2) + 10 solved for y
+}
+
 
 function blockSroll(bool) {
   if (bool) document.body.style.overflowY = "hidden"
@@ -64,7 +69,7 @@ function blockSroll(bool) {
 }
 
 const divHeight = 5000, gap = 0
-var nextScene, startMs, inMs = 2000, callback
+var attualScene = 0, isMoving = false, nextScene, startMs, inMs = 2000, callback, timeDistortion
 
 var coefficient;
 function findCoefficient(what, start, finish) {
@@ -101,6 +106,8 @@ function moveCamera() {
   isMoving = true
   blockSroll(true)
 
+  timeDistortion = (Math.abs(attualScene - nextScene) <= 1)
+
   callback = () => {
     attualScene = nextScene
     blockSroll(false)
@@ -113,22 +120,23 @@ function moveCamera() {
 function animateMoveCamera(timestamp) {
   if (startMs == undefined) startMs = timestamp
 
-  var ms = (timestamp - startMs > inMs) ? inMs : timestamp - startMs
+  const ms = (timestamp - startMs > inMs) ? inMs : timestamp - startMs,
+        msMove = (timeDistortion) ? y(ms/2000*20)/4*2000 : ms
 
-  //console.log(ms, nextScene, attualScene)
-
-  cameraHome.position.x = ms * coefficient.posX + scrollData[attualScene].posX
-  cameraHome.position.y = ms * coefficient.posY + scrollData[attualScene].posY
-  cameraHome.position.z = ms * coefficient.posZ + scrollData[attualScene].posZ
-  cameraHome.rotation.x = ms * coefficient.rotX + scrollData[attualScene].rotX
-  cameraHome.rotation.y = ms * coefficient.rotY + scrollData[attualScene].rotY
-
+  cameraHome.position.x = msMove * coefficient.posX + scrollData[attualScene].posX
+  cameraHome.position.y = msMove * coefficient.posY + scrollData[attualScene].posY
+  cameraHome.position.z = msMove * coefficient.posZ + scrollData[attualScene].posZ
+  cameraHome.rotation.x = msMove * coefficient.rotX + scrollData[attualScene].rotX
+  cameraHome.rotation.y = msMove * coefficient.rotY + scrollData[attualScene].rotY
+  
 
   if (ms >= inMs)
     callback()
   else
     window.requestAnimationFrame(animateMoveCamera)
 }
+
+
 
 //moveCamera(toScene, inTime, callback)
 
