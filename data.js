@@ -33,6 +33,20 @@ const scrollData = [
         posZ: 60,
         rotX: 0,
         rotY: 0.9
+    },
+    {// scene 5 (before DOMContentLoaded scene)
+        posX: 400,
+        posY: 200,
+        posZ: 300,
+        rotX: 0,
+        rotY: 1.3
+    },
+    {// scene 6 (entry inside scene)
+        posX: 25,
+        posY: 20,
+        posZ: 60,
+        rotX: 0,
+        rotY: 0.9
     }
 ]
 
