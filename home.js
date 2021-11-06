@@ -1,13 +1,15 @@
+const firstScene = 5
+
 /*Scene*/
 const sceneHome = new THREE.Scene();
 
 
 /*Camera*/
 const cameraHome = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000.0)
-cameraHome.position.x = scrollData[0].posX;
-cameraHome.position.y = scrollData[0].posY;
-cameraHome.position.z = scrollData[0].posZ;
-cameraHome.rotation.y = scrollData[0].rotY;
+cameraHome.position.x = scrollData[firstScene].posX;
+cameraHome.position.y = scrollData[firstScene].posY;
+cameraHome.position.z = scrollData[firstScene].posZ;
+cameraHome.rotation.y = scrollData[firstScene].rotY;
 
 
 /*Render*/
@@ -68,8 +70,8 @@ function blockSroll(bool) {
   else document.body.style.overflowY = "scroll"
 }
 
-const divHeight = 5000, gap = 0
-var attualScene = 0, isMoving = false, nextScene, startMs, inMs = 2000, callback, timeDistortion
+const divHeight = 5000, gap = 0, inMs = 2000
+var attualScene = firstScene, isMoving = false, nextScene, startMs, callback, timeDistortion
 
 var coefficient;
 function findCoefficient(what, start, finish) {
@@ -102,6 +104,9 @@ function moveCamera() {
     rotY: findCoefficient("rotY", attualScene, nextScene)
   };
 
+  if (attualScene == 0 && !homeArrow.classList.contains("frombottom")) 
+    homeArrow.classList.add("frombottom")
+
   startMs = undefined
   isMoving = true
   blockSroll(true)
@@ -109,10 +114,24 @@ function moveCamera() {
   timeDistortion = (Math.abs(attualScene - nextScene) <= 1)
 
   callback = () => {
+    if (attualScene == 5) {
+      homeOverlay.style.display = "none"
+      homeArrow.classList.remove("frombottom")
+    }
+    
+    if (nextScene == 0)
+      homeArrow.classList.remove("frombottom")
+    
     attualScene = nextScene
     blockSroll(false)
     isMoving = false
   }
+
+  /*if (nextScene == 0){
+    setTimeout(() => {
+      homeArrow.classList.remove("frombottom")
+    }, inMs-300)
+  }*/
 
   window.requestAnimationFrame(animateMoveCamera)
 }
@@ -140,7 +159,6 @@ function animateMoveCamera(timestamp) {
 /*Animate*/
 function animateHome() {
   if (home.style.display == "none") return
-  //TWEEN.update();
   requestAnimationFrame(animateHome);
   renderHome.render(sceneHome, cameraHome);
 }; animateHome();
