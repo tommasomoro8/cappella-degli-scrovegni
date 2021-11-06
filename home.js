@@ -59,7 +59,7 @@ function addStar() {
 function y(x) {
   if (x < 0.00002) return 0
   return ( ( Math.cbrt( Math.sqrt(3) * Math.sqrt( 27*Math.pow(x, 2) - 540*x + 2704 ) + 9*x - 90 ) ) / (Math.cbrt(2)*Math.pow(3, 2/3)) ) - ( (Math.cbrt(2/3)) / ( Math.cbrt( Math.sqrt(3) * Math.sqrt( 27*Math.pow(x, 2) - 540*x + 2704 ) + 9*x - 90 ) ) ) + 2
-  // x = (y-2)^3 + (y-2) + 10 solved for y
+  // inverse of y = (x-2)^3 + (x-2) + 10
 }
 
 
