@@ -5,7 +5,9 @@ const sceneHome = new THREE.Scene();
 
 
 /*Camera*/
-const cameraHome = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000.0)
+var fov = 155
+
+var cameraHome = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, 1000.0)
 cameraHome.position.x = scrollData[firstScene].posX;
 cameraHome.position.y = scrollData[firstScene].posY;
 cameraHome.position.z = scrollData[firstScene].posZ;
@@ -153,6 +155,32 @@ function animateMoveCamera(timestamp) {
     callback()
   else
     window.requestAnimationFrame(animateMoveCamera)
+}
+
+var fovCoeff, startMsFov, inMsFov, startFov
+
+function moveFov(toFov, _inMsFov) {
+  startFov = fov
+  inMsFov = _inMsFov
+
+  fovCoeff = (toFov - startFov)/(inMsFov)
+
+  startMsFov = undefined
+
+  window.requestAnimationFrame(animateMoveFov)
+}
+
+function animateMoveFov(timestamp) {
+  if (startMsFov == undefined) startMsFov = timestamp
+
+  const ms = (timestamp - startMsFov > inMsFov) ? inMsFov : timestamp - startMsFov
+
+  fov = ms * fovCoeff + startFov
+  cameraHome.fov = fov
+  cameraHome.updateProjectionMatrix()
+
+  if (ms < inMsFov)
+    window.requestAnimationFrame(animateMoveFov)
 }
 
 
