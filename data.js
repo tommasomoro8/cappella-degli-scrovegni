@@ -42,11 +42,11 @@ const scrollData = [
         rotY: 1.3
     },
     {// scene 6 (entry inside scene)
-        posX: 25,
-        posY: 20,
-        posZ: 60,
+        posX: 0,
+        posY: 0,
+        posZ: 0,
         rotX: 0,
-        rotY: 0.9
+        rotY: 0
     }
 ]
 

@@ -22,13 +22,9 @@ function preloadImages(callback) {
 }
 
 function goIndoor() {
-  home.style.display = "none";
-  contactsButton.style.display = "none";
-  indoor.style.display = "flex";
-  backHomeButton.style.display = "flex";
-  document.body.style.overflowY = "hidden"
-  animate()
-  camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
+  nextScene = 6
+  moveCamera()
+  moveFov(35, 2000)
 }
 
 function goHome() {
