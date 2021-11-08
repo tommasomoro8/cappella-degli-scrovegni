@@ -32,9 +32,8 @@ function goIndoor() {
 }
 
 function goHome() {
-  if (descriptionOpen) {
-    closeDescription()
-  };
+  //SISTEMARE QUI
+  if (descriptionOpen) closeDescription()
   indoor.style.display = "none";
   backHomeButton.style.display = "none";
   contactsButton.style.display = "flex";

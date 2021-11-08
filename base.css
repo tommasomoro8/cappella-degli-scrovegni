@@ -65,25 +65,21 @@ div {
     color: white;
     z-index: 5;
     position: fixed;
-    top: 30vh;
+    top: 40vh;
     text-align: left;
     font-size: 5vw;
     font-weight: bold;
     font-family: 'Sora', sans-serif;
     text-shadow: 2px 2px 10px rgb(150, 150, 150);
-    transition: 500ms ease-in-out;
+    transition: 500ms;
     opacity: 0;
 }
 
-.homeText.fromtop {
+.homeText.appear {
     opacity: 1;
-    transform: translate(0, 10vh);
+    transform: translate(0, 0);
 }
 
-.homeText.frombottom {
-    opacity: 0;
-    transform: translate(0, 20vh);
-}
 
 .t1 {
     left: 13vw;
@@ -118,11 +114,6 @@ div {
     opacity: 1;
     transform: translate(0, 0);
 }
-/*
-.homeArrow.fromtop {
-    opacity: 1;
-    transform: translate(0, 0);
-}*/
 
 .homeArrow.frombottom {
     opacity: 0;
