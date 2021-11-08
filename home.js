@@ -58,6 +58,26 @@ function addStar() {
 }; Array(2000).fill().forEach(addStar)
 
 
+/*Click for indoor*/
+var canGoIndoor = false
+
+function checkHomePointer() {
+  if (canGoIndoor) homeScroll.style.cursor = "pointer"
+  else homeScroll.style.cursor = "default"
+}
+
+homeScroll.addEventListener('mousemove', checkHomePointer)
+document.addEventListener('scroll', checkHomePointer)
+
+homeScroll.addEventListener('click', () => {
+  if (canGoIndoor) {
+    console.warn("entrato")//goIndoor()
+    canGoIndoor = false
+  }
+  else console.error("nonpuoi")
+})
+
+
 /*Onscroll animations*/
 
 function y(x) {
@@ -73,7 +93,7 @@ function blockSroll(bool) {
 }
 
 const divHeight = 5000, gap = 0, inMs = 2000
-var attualScene = firstScene, isMoving = false, nextScene, startMs, callback, timeDistortion
+var attualScene = firstScene, isMoving = true, nextScene = 0, startMs, callback, timeDistortion
 
 var coefficient;
 function findCoefficient(what, start, finish) {
@@ -97,6 +117,8 @@ document.body.onscroll = () => {
   document.documentElement["scrollTop"] = divHeight/2
 }
 
+const textIds = ["homeText1", "homeText2", "homeText3", "homeText4", "homeText5"]
+
 function moveCamera() {
   coefficient = {
     posX: findCoefficient("posX", attualScene, nextScene),
@@ -115,7 +137,22 @@ function moveCamera() {
 
   timeDistortion = (Math.abs(attualScene - nextScene) <= 1)
 
+
+  if (attualScene < textIds.length)
+    eval(textIds[attualScene]).classList.remove("appear")
+
+  setTimeout(() => eval(textIds[nextScene]).classList.add("appear"), (attualScene == 5) ? inMs : inMs-200)
+
+  if (attualScene == 4)
+      canGoIndoor = false
+
+  checkHomePointer()
+
+
   callback = () => {
+    if (nextScene == 4)
+      canGoIndoor = true
+
     if (attualScene == 5) {
       homeOverlay.style.display = "none"
       homeArrow.classList.remove("frombottom")
@@ -127,13 +164,9 @@ function moveCamera() {
     attualScene = nextScene
     blockSroll(false)
     isMoving = false
-  }
 
-  /*if (nextScene == 0){
-    setTimeout(() => {
-      homeArrow.classList.remove("frombottom")
-    }, inMs-300)
-  }*/
+    checkHomePointer()
+  }
 
   window.requestAnimationFrame(animateMoveCamera)
 }
