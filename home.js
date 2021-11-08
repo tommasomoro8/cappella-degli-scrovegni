@@ -71,10 +71,9 @@ document.addEventListener('scroll', checkHomePointer)
 
 homeScroll.addEventListener('click', () => {
   if (canGoIndoor) {
-    console.warn("entrato")//goIndoor()
+    //goIndoor()
     canGoIndoor = false
   }
-  else console.error("nonpuoi")
 })
 
 
@@ -137,14 +136,21 @@ function moveCamera() {
 
   timeDistortion = (Math.abs(attualScene - nextScene) <= 1)
 
+  /*if (nextScene == 6) {
+    console.error("ao")
+    homeOverlay.style.display = "flex"
+    homeOverlay.style.opacity = 1
+    setTimeout(() => homeOverlay.style.display = "none", 2000)
+  }*/
 
   if (attualScene < textIds.length)
     eval(textIds[attualScene]).classList.remove("appear")
 
-  setTimeout(() => eval(textIds[nextScene]).classList.add("appear"), (attualScene == 5) ? inMs : inMs-200)
+  if (attualScene != 6 && nextScene != 6)
+    setTimeout(() => eval(textIds[nextScene]).classList.add("appear"), (attualScene == 5) ? inMs : inMs-200)
 
   if (attualScene == 4)
-      canGoIndoor = false
+    canGoIndoor = false
 
   checkHomePointer()
 
@@ -160,6 +166,21 @@ function moveCamera() {
     
     if (nextScene == 0)
       homeArrow.classList.remove("frombottom")
+
+    /*if (nextScene == 6) {
+      homeOverlay.style.opacity = 0
+
+      home.style.display = "none";
+      contactsButton.style.display = "none";
+      indoor.style.display = "flex";
+      backHomeButton.style.display = "flex";
+      document.body.style.overflowY = "hidden";
+      animate()
+      camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
+
+      moveFov(65, 1)
+    }*/
+      
     
     attualScene = nextScene
     blockSroll(false)
