@@ -44,9 +44,9 @@ controls.maxDistance = 5;
 function animate() {
   if (indoor.style.display == "" || indoor.style.display == "none") return
   TWEEN.update();
-  requestAnimationFrame(animate);
   render.render(scene, camera);
   controls.update();
+  window.requestAnimationFrame(animate);
 }; animate();
 
 function WindowResize() {
