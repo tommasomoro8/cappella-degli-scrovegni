@@ -29,7 +29,7 @@ function goIndoor() {
 
 function goHome() {
   //SISTEMARE QUI
-  if (descriptionOpen) closeDescription()
+  /*if (descriptionOpen) closeDescription()
   indoor.style.display = "none";
   backHomeButton.style.display = "none";
   contactsButton.style.display = "flex";
@@ -41,7 +41,7 @@ function goHome() {
   homeText1.classList.add("fromtop")
   animateHome()
   home.scrollTop = 0
-  moveCamera()
+  moveCamera()*/
 }
 
 var language = "EN"
