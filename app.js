@@ -24,10 +24,49 @@ function preloadImages(callback) {
 function goIndoor() {
   nextScene = 6
   moveCamera()
-  moveFov(35, 2000)
+  moveFov(165, 2000)
+  homeOverlay.style.display = "flex"
+  setTimeout(() => homeOverlay.style.opacity = 1, 0)
 }
 
 function goHome() {
+  if (descriptionOpen) closeDescription()
+
+  moveFov(75, 1000)
+  homeOverlay.style.transition = '1s'
+  homeOverlay.style.display = "flex"
+  setTimeout(() => homeOverlay.style.opacity = 1, 0)
+
+  setTimeout(() => {
+    homeOverlay.style.transition = '2s'
+
+    indoor.style.display = "none";
+    backHomeButton.style.display = "none";
+    contactsButton.style.display = "flex";
+    rightButton.style.display = "flex";
+    home.style.display = "flex";
+
+    animateHome()
+    nextScene = 0
+    moveCamera()
+    //homeOverlay.style.display = "none"
+    //homeOverlay.style.opacity = 0
+    setTimeout(() => {
+      homeOverlay.style.display = "none"
+      homeText1.classList.add("appear")
+      document.body.style.overflowY = "scroll"
+      blockSroll(false)
+      isMoving = false
+    }, 2000)
+  }, 1000)
+
+  
+
+
+
+
+
+
   //SISTEMARE QUI
   /*if (descriptionOpen) closeDescription()
   indoor.style.display = "none";
