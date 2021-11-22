@@ -24,53 +24,18 @@ function preloadImages(callback) {
 }
 
 function goIndoor() {
-  nextScene = 6
-  moveCamera()
-  moveFov(165, 2000)
-  homeOverlay.style.display = "flex"
-  setTimeout(() => homeOverlay.style.opacity = 1, 0)
+  home.style.display = "none";
+  contactsButton.style.display = "none";
+  indoor.style.display = "flex";
+  backHomeButton.style.display = "flex";
+  document.body.style.overflowY = "hidden"
+  animate()
+  camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
 }
 
 function goHome() {
-  if (descriptionOpen) closeDescription()
-
-  moveFov(75, 1000)
-  homeOverlay.style.transition = '1s'
-  homeOverlay.style.display = "flex"
-  setTimeout(() => homeOverlay.style.opacity = 1, 0)
-
-  setTimeout(() => {
-    homeOverlay.style.transition = '2s'
-
-    indoor.style.display = "none";
-    backHomeButton.style.display = "none";
-    contactsButton.style.display = "flex";
-    rightButton.style.display = "flex";
-    home.style.display = "flex";
-
-    animateHome()
-    nextScene = 0
-    moveCamera()
-    //homeOverlay.style.display = "none"
-    //homeOverlay.style.opacity = 0
-    setTimeout(() => {
-      homeOverlay.style.display = "none"
-      homeText1.classList.add("appear")
-      document.body.style.overflowY = "scroll"
-      blockSroll(false)
-      isMoving = false
-    }, 2000)
-  }, 1000)
-
-  
-
-
-
-
-
-
   //SISTEMARE QUI
-  /*if (descriptionOpen) closeDescription()
+  if (descriptionOpen) closeDescription()
   indoor.style.display = "none";
   backHomeButton.style.display = "none";
   contactsButton.style.display = "flex";
@@ -82,7 +47,7 @@ function goHome() {
   homeText1.classList.add("fromtop")
   animateHome()
   home.scrollTop = 0
-  moveCamera()*/
+  moveCamera()
 }
 
 var language = "EN"
