@@ -11,10 +11,12 @@
 </head>
 <body>
 
+   <div id="homeOverlay"></div>
+
    <div id="home">
       <canvas id="homeRender"></canvas>
       <div id="homeScroll"></div>
-      <div class="homeArrow" id="homeArrow">
+      <div class="homeArrow frombottom" id="homeArrow">
          <div id="homeArrowText"></div>
          <img src="system/bottom-arrow.png" class="homeArrowImg" />
       </div>
@@ -113,11 +115,11 @@
          <div class="sottotitolo-domande" id="creatori-title"></div>
          <div class="icon-wrapper">
             <div class="git-wrap">
-               <a onclick="window.open('https://github.com/tommasomoro8')"><i class="fab fa-github fa-3x"></i></a>
+               <a onclick="window.open('github.com/tommasomoro8')"><i class="fab fa-github fa-3x"></i></a>
                <div>Tommaso Moro</div>
             </div>
             <div class="git-wrap">
-               <a onclick="window.open('https://github.com/IvanLomaka')"><i class="fab fa-github fa-3x"></i></a>
+               <a onclick="window.open('github.com/IvanLomaka')"><i class="fab fa-github fa-3x"></i></a>
                <div>Ivan Lomaka</div>
             </div>
          </div>
@@ -138,13 +140,13 @@
   <script src="libraries/threex.domevents.js"></script>
   <script src="libraries/Tween.js"></script>
   <script src="libraries/ColladaLoader.js"></script>
-
+  
   <script src="data.js"></script>
   <script src="form.js"></script>
   <script src="home.js"></script>
   <script src="app.js"></script>
   <script src="render.js"></script>
-  <script type="module" src="firebase.js"></script>
+  <script src="firebase.js" type="module"></script>
 
   <script>
    preloadImages(() => {
@@ -153,8 +155,16 @@
       else if (language == "IT")
          document.title = "Cappella Degli Scrovegni"
    })
+
+   window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+         moveCamera()
+         moveFov(65, 2000)
+         homeOverlay.style.opacity = 0
+      }, 1000);
+   });
   </script>
 
-  <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
+  <noscript><div class="noscript">Attiva JavaScript dalle impostazioni del tuo browser<div id="noscript-space"></div>Enable JavaScript in your browser settings</div></noscript>
 </body>
 </html>
