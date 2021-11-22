@@ -3,11 +3,10 @@ const firstScene = 5
 /*Scene*/
 const sceneHome = new THREE.Scene();
 
-
 /*Camera*/
 var fov = 155
 
-var cameraHome = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, 1000.0)
+const cameraHome = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, 1000.0)
 cameraHome.position.x = scrollData[firstScene].posX;
 cameraHome.position.y = scrollData[firstScene].posY;
 cameraHome.position.z = scrollData[firstScene].posZ;
@@ -21,8 +20,9 @@ const renderHome = new THREE.WebGLRenderer({
 renderHome.setPixelRatio(window.devicePixelRatio);
 renderHome.setSize(window.innerWidth, window.innerHeight);
 
+
 new THREE.ColladaLoader().load("render.dae", (result) => {
-  let chapel = result.scene
+  const chapel = result.scene
   chapel.rotation.z = 64
   //chapel.rotation.z = Math.PI/2
   sceneHome.add(chapel)
@@ -44,7 +44,8 @@ const gridHelper = new THREE.GridHelper(50, 10); sceneHome.add(gridHelper);
 
 
 /*Stars*/
-function addStar() {
+var stars = []
+for (var i = 0; i < 2000; i++) {
   const geometry = new THREE.SphereGeometry(0.25,24,24);
   const material = new THREE.MeshBasicMaterial( {color:0xffffff} )
   const star = new THREE.Mesh(geometry, material)
@@ -54,8 +55,8 @@ function addStar() {
   star.position.set(x, y, z)
 
   sceneHome.add(star)
-
-}; Array(2000).fill().forEach(addStar)
+  stars.push(star)
+}
 
 
 /*Click for indoor*/
@@ -99,6 +100,12 @@ function findCoefficient(what, start, finish) {
   return (scrollData[finish][what] - scrollData[start][what])/(inMs)
 }
 
+var starsCoefficient
+function findStarsCoefficient(start, finish) {
+  if (start == 5 && finish == 0) return 0
+  return (finish - start)/(inMs*2.5)
+}
+
 
 document.body.onscroll = () => {
   if (!isMoving) {
@@ -113,7 +120,7 @@ document.body.onscroll = () => {
       moveCamera()
   }
 
-  document.documentElement["scrollTop"] = divHeight/2
+  if (nextScene != 6) document.documentElement["scrollTop"] = divHeight/2
 }
 
 const textIds = ["homeText1", "homeText2", "homeText3", "homeText4", "homeText5"]
@@ -126,6 +133,7 @@ function moveCamera() {
     rotX: findCoefficient("rotX", attualScene, nextScene),
     rotY: findCoefficient("rotY", attualScene, nextScene)
   };
+  starsCoefficient = findStarsCoefficient(attualScene, nextScene)
 
   if (attualScene == 0 && !homeArrow.classList.contains("frombottom")) 
     homeArrow.classList.add("frombottom")
@@ -137,13 +145,8 @@ function moveCamera() {
   timeDistortion = (Math.abs(attualScene - nextScene) <= 1)
 
   if (nextScene == 6) {
-    homeOverlay.style.display = "flex"
-    setTimeout(() => homeOverlay.style.opacity = 1, 0)
-
-
-    indoor.style.display = "flex";
-    animate()
-    camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
+    //homeOverlay.style.display = "flex"
+    //setTimeout(() => homeOverlay.style.opacity = 1, 0)
   }
 
   if (attualScene < textIds.length)
@@ -171,22 +174,35 @@ function moveCamera() {
       homeArrow.classList.remove("frombottom")
 
     if (nextScene == 6) {
-      moveFov(65, 1)
+      fov = 75; camera.fov = fov; camera.updateProjectionMatrix()
 
       home.style.display = "none";
       contactsButton.style.display = "none";
-      backHomeButton.style.display = "flex";
       document.body.style.overflowY = "hidden";
-
-
+      
+      backHomeButton.style.display = "flex";
+      indoor.style.display = "flex"
+      animate()
+      
+      camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794); controls.update();
+      
+      homeOverlay.style.transition = '1s'
+      document.documentElement["scrollTop"] = 0
       homeOverlay.style.opacity = 0
-      setTimeout(() => homeOverlay.style.display = "none", 2000)
+      moveFov(65, 1000)
+
+      setTimeout(() => {
+        homeOverlay.style.display = "none"
+        homeOverlay.style.transition = '2s'
+      }, 500)
     }
       
+    if (nextScene != 6){
+      blockSroll(false)
+      isMoving = false
+    }
     
     attualScene = nextScene
-    blockSroll(false)
-    isMoving = false
 
     checkHomePointer()
   }
@@ -205,6 +221,8 @@ function animateMoveCamera(timestamp) {
   cameraHome.position.z = msMove * coefficient.posZ + scrollData[attualScene].posZ
   cameraHome.rotation.x = msMove * coefficient.rotX + scrollData[attualScene].rotX
   cameraHome.rotation.y = msMove * coefficient.rotY + scrollData[attualScene].rotY
+
+  stars.forEach((star) => star.position.y = ms * starsCoefficient + star.position.y)
   
 
   if (ms >= inMs)
@@ -232,8 +250,13 @@ function animateMoveFov(timestamp) {
   const ms = (timestamp - startMsFov > inMsFov) ? inMsFov : timestamp - startMsFov
 
   fov = ms * fovCoeff + startFov
-  cameraHome.fov = fov
-  cameraHome.updateProjectionMatrix()
+  if (home.style.display == "none") {
+    camera.fov = fov
+    camera.updateProjectionMatrix()
+  } else {
+    cameraHome.fov = fov
+    cameraHome.updateProjectionMatrix()
+  }
 
   if (ms < inMsFov)
     window.requestAnimationFrame(animateMoveFov)
