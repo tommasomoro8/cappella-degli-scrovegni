@@ -12,7 +12,7 @@ scene.background = new THREE.CubeTextureLoader().load([
 
 
 /*Camera*/
-const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1.0, 1000.0);
+const camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 1.0, 1000.0);
 
 camera.position.set(0.021828348485616236, 19.182126291654217, -2.1431864408863794);
 
@@ -44,9 +44,9 @@ controls.maxDistance = 5;
 function animate() {
   if (indoor.style.display == "" || indoor.style.display == "none") return
   TWEEN.update();
-  requestAnimationFrame(animate);
   render.render(scene, camera);
   controls.update();
+  window.requestAnimationFrame(animate);
 }; animate();
 
 function WindowResize() {
