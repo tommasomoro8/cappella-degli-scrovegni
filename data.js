@@ -42,92 +42,11 @@ const scrollData = [
         rotY: 1.3
     },
     {// scene 6 (entry inside scene)
-        posX: 0,
-        posY: 0,
-        posZ: 0,
+        posX: 25,
+        posY: 20,
+        posZ: 60,
         rotX: 0,
-        rotY: 0
-    }
-]
-
-const languageFormData = [
-    {
-        getId: document.getElementById('titolo-contattaci'),
-        ita: 'Contattaci',
-        ing: 'Contact us'
-    },
-    {
-        getId: document.getElementById('creatori-title'),
-        ita: 'Creatori del sito',
-        ing: 'Website developers'
-    },
-    {
-        getId: document.getElementById('segnala-un-problema'),
-        ita: 'Segnala un problema',
-        ing: 'Report a problem'
-    },
-    {
-        getId: document.getElementById('bottone-feedback'),
-        ita: 'Inviaci feedback',
-        ing: 'Send us feedback'
-    },
-    {
-        getId: document.getElementById('segnala-problema'),
-        ita: 'Segnala il problema',
-        ing: 'Report the issue'
-    },
-    {
-        getId: document.getElementById('lascia-e-mail'),
-        ita: 'Lasciaci la tua e-mail',
-        ing: 'Leave us your e-mail'
-    },
-    {
-        getId: document.getElementById('invia-messaggio'),
-        ita: 'Invia',
-        ing: 'Send'
-    },
-    {
-        getId: document.getElementById('indietro-crediti'),
-        ita: 'Indietro',
-        ing: 'Back'
-    },
-    {
-        getId: document.getElementById('voto-al-sito'),
-        ita: 'Dai un voto al nostro sito',
-        ing: 'Rate our website'
-    },
-    {
-        getId: document.getElementById('scrivici-un-mess'),
-        ita: 'Scrivici un messaggio',
-        ing: 'Write us a message'
-    },
-    {
-        getId: document.getElementById('indietro-crediti-feedback'),
-        ita: 'Indietro',
-        ing: 'Back'
-    },
-    {
-        getId: document.getElementById('invia-messaggio-feedback'),
-        ita: 'Invia',
-        ing: 'Send'
-    },
-    {
-        getId: document.getElementById('messaggio-utente'),
-        ita: 'Descrivici il problema',
-        ing: 'Describe the issue',
-        placeHolder: true
-    },
-    {
-        getId: document.getElementById('e-mail-holder'),
-        ita: 'Scrivi qui la tua e-mail (opzionale)',
-        ing: 'Write your e-mail here (optional)',
-        placeHolder: true
-    },
-    {
-        getId: document.getElementById('messaggio-utente-feedback'),
-        ita: 'Lascia una recensione',
-        ing: 'Leave a review',
-        placeHolder: true
+        rotY: 0.9
     }
 ]
 
