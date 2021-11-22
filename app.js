@@ -1,3 +1,5 @@
+alert("ok")
+
 function preloadImages(callback) {
   var imagesLoaded = 0
 
