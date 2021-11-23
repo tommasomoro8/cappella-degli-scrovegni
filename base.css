@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 body {
     font-family: 'Lato', sans-serif;
@@ -11,18 +12,12 @@ body {
     overflow-y: scroll;
     -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.redColor {
-    border-color: red;
-}
-
-.tomatoColor {
-    background-color: tomato;
-}
-
-.selected {
-    background-color: rgba(46, 45, 45, 0.95)!important;
+body::-webkit-scrollbar {
+    display: none;
 }
 
 div, button, canvas:focus {
@@ -43,8 +38,30 @@ div {
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 5px;
 }
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #d3d3d3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a09f9f;
+}
+
+.redColor {
+    border-color: red;
+}
+
+.tomatoColor {
+    background-color: tomato;
+}
+
+.selected {
+    background-color: rgba(46, 45, 45, 0.95)!important;
+}
+
 
 /*home*/
 
@@ -53,7 +70,7 @@ div {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 5000px);
     background-color: rgb(0, 0, 0);
     opacity: 1;
     z-index: 100;
@@ -71,7 +88,7 @@ div {
     color: white;
     z-index: 10;
     width: 100vw;
-    height: 5000px;
+    height: calc(100vh + 5000px);
 }
 
 .homeText {
@@ -127,11 +144,6 @@ div {
     opacity: 1;
     transform: translate(0, 0);
 }
-/*
-.homeArrow.fromtop {
-    opacity: 1;
-    transform: translate(0, 0);
-}*/
 
 .homeArrow.frombottom {
     opacity: 0;
@@ -551,10 +563,6 @@ div {
 }
 
 /* open contacs modal */
-
-/* open contacs modal */
-
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 .modal {
     position: fixed;
@@ -1606,353 +1614,12 @@ footer {
     }
 }
 
-/*
-.modal {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    transform: translate(-200px, 200px) scale(0);
-    transition: 0.3s ease-in-out;
-    z-index: 20;
-    background-color: #ffffff;
-    width: 400px;
-    max-width: 60%;
-    overflow: hidden;
-    height: 37vh;
-}
-
-.modal.active {
-    transform: translate(0, 0) scale(1);
-}
-
-.modal-header {
-    margin: auto;
-    margin-top: 10px;
-    width: 90%;
-    padding-bottom: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: solid gray 1px;
-}
-
-.modal-header .title {
-    font-size: 3vh;
-    font-weight: bold;
-}
-
-.close-button {
-    font-size: 25px;
-}
-
-.modal-header .close-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-#overlay {
-    z-index: 19;
-    position: fixed;
-    opacity: 0;
-    transition: 200ms ease-in-out;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.80);
-    pointer-events: none;
-}
-
-#overlay.active {
-    opacity: 1;
-    pointer-events: all;
-}
-
-.titolo-desc {
-    border-bottom: 1px solid gray;
-    font-size: 3vh;
-    width: 300px;
-    max-width: 70%;
-    font-weight: bold;
-    margin-bottom: 1vh;
-}
-
-.prima-desc {
-    text-align: left;
-    font-size: 2vh;
-}
-
-.prima-desc span{
-    margin-bottom: 15px;
-}
-
-.prima-desc a {
-    text-decoration: none;
-    color: black;
-}
-
-.domande {
-    margin: auto;
-    width: 90%;
-    text-align: left;
-}
-
-.sottotitolo-domande {
-    font-size: 2vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.riga-domande {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 10px;
-}
-
-.riga-domande button {
-    height: 4vh;
-    border-radius: 10%;
-    border: none;
-    width: 18%;
-    transition: .2s ease-in-out;
-}
-
-.riga-domande button:hover {
-    background-color: rgb(179, 175, 175);
-}
-
-.button-active {
-    background-color: #32a852!important;
-}
-
-.form-wrapper {
-    width: 98%;
-}
-
-.form-wrapper textarea {
-    overflow: auto;
-    width: 100%;
-    height: 10vh;
-    resize: none;
-}
- 
-.form-wrapper textarea:focus {
-    outline: none;
-}
-
-.form-wrapper input {
-    overflow: auto;
-    width: 100%;
-    height: 3vh;
-    resize: none;
-}
- 
-.form-wrapper input:focus {
-    outline: none;
-}
-
-.invia {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
-}
-
-.invia button {
-    height: 4vh;
-    border-radius: 10%;
-    border: none;
-    width: 20%;
-    background-color: #32a852;
-    transition: .2s ease-in-out;
-}
-
-.invia button:hover {
-    background-color: #2e9449;
-}
-
-.icon-wrapper {
-    width: 70%;
-    margin: auto;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    border-bottom: solid 1px gray;
-    padding-bottom: 10px;
-}
-
-.fa-github {
-    color: black;
-    transition: 0.2s ease-in-out;
-}
-
-.fa-github:hover {
-    color: #2e9449;
-}
-
-.git-wrap div {
-    font-size: 1.5vh;
-}
-
-#form-testo {
-    position: absolute;
-    right: 100%;
-    background-color: white;
-    width: 400px;
-    max-width: 100%;
-    transition: 0.5s;
-}
-
-#feedback-form {
-    position: absolute;
-    right: 100%;
-    background-color: white;
-    width: 400px;
-    max-width: 100%;
-    transition: 0.5s;
-}
-
-.feedback-wrapper {
-    margin-top: 1vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 20vh;
-}
-
-.feedback-wrapper button {
-    margin-bottom: 1vh;
-    height: 5vh;
-    font-size: 2vh;
-    border: none;
-    width: 70%;
-    background-color: #32a852;
-    color: white;
-    transition: .2s ease-in-out;
-}
-
-.feedback-wrapper button:hover {
-    background-color: #2e9449;
-}
-
-#indietro-crediti {
-    background-color: tomato;
-}
-
-#indietro-crediti:hover {
-    background-color: rgb(255, 86, 56);
-}
-
-#indietro-crediti-feedback {
-    background-color: tomato;
-}
-
-#indietro-crediti-feedback:hover {
-    background-color: rgb(255, 86, 56);
-}
-
-@media (max-height: 500px) and (orientation:landscape) {
-    .modal{
-        height: 70vh;
-    }
-
-    .sottotitolo-domande {
-        font-size: 2vw;
-    }
-
-    .git-wrap div {
-        font-size: 1.5vw;
-    }
-
-    .modal-header .title {
-        font-size: 3vw;
-    }
-
-    .feedback-wrapper button {
-        margin-bottom: 1vw;
-        height: 5vw;
-        font-size: 2vw;
-    }
-
-    .form-wrapper textarea {
-        height: 5vw;
-    }
-
-    .form-wrapper input {
-        height: 2vw;
-    }
-
-    .invia {
-        margin-top: 10px;
-    }
-
-    .invia button {
-        height: 4vw;
-    }
-
-    .riga-domande button {
-        height: 4vw;
-    }
-
-    .riga-domande {
-        padding-bottom: 5px;
-    }
-
-    #form-testo {
-        min-height: 50vh;
-    }
-
-    #feedback-form {
-        min-height: 50vh;
-    }
-}
-
-@media (min-width: 10px) and (orientation:portrait) {
-    .feedback-wrapper {
-        height: 15vh;
-    }
-
-    .form-wrapper textarea {
-        height: 7vh;
-    }
-
-    .invia button {
-        width: auto;
-    }
-}
-
-.whiteButton {
-    color: white;
-}
-
-.blackIshColor {
-    background-color: #606163;
-}*/
-
-/*
-nero per night-mode: #3c3d40
-bianco testo: #fff
-*/
-
 
  /*noscript*/
 
 .noscript {
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     width: 100vw;
     height: 100vh;
     font-size: 3vw;
@@ -1961,6 +1628,12 @@ bianco testo: #fff
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 200;
     display: flex; align-items: center; text-align: center; align-content: center; justify-content: center; flex-direction: column;
+    font-family: 'Sora', sans-serif;
+}
+
+#noscript-space {
+    width: 100vw;
+    height: 15px;
 }
