@@ -121,13 +121,13 @@ function success(data) {
     exitAll.style.transform = 'translateX(0%)'
 
     if(/*funzione server con data come parametro*/true) {
-        imageServer.src = '/system/success-icon.png'
+        imageServer.src = 'system/success-icon.png'
         let ita
         language == 'IT' ? ita = true : ita = false
 
         ita ? textServer.textContent = 'Tutto è stato inviato!' : textServer.textContent = 'All good!'
     } else {
-        imageServer.src = '/system/fail-icon.png'
+        imageServer.src = 'system/fail-icon.png'
         let ita
         language == 'IT' ? ita = true : ita = false
 
@@ -137,13 +137,13 @@ function success(data) {
 
 function WinFail(win) {
     if(win) {
-        imageServer.src = '/system/success-icon.png'
+        imageServer.src = 'system/success-icon.png'
         let ita
         language == 'IT' ? ita = true : ita = false
 
         ita ? textServer.textContent = 'Tutto è stato inviato!' : textServer.textContent = 'All good!'
     } else {
-        imageServer.src = '/system/fail-icon.png'
+        imageServer.src = 'system/fail-icon.png'
         let ita
         language == 'IT' ? ita = true : ita = false
 
