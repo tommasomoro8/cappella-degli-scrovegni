@@ -226,108 +226,42 @@
   <div id="indoor" class="indoor"></div>
 
   <div id="description" class="description">
-   <div id="heading">
-      <div id="headingContainer">
-         <div id="headingTitle" class="headingTitle"></div>
-         <div id="headingSubtitle" class="headingTitle"></div>
-      </div>
-      <div class="container-bottoni">
-         <button id="play" class="play"><i class="fas fa-play"></i></button>
-         <button id="stopp" class="stop"><i class="fas fa-stop"></i></button>
-         <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
-      </div>
-   </div>
-   <div class="body-desc" id="bodyDesc">
-      <div id="text5" class="text">
-         <div class="image-container">
-            <div class="poster1">
-               <img id="img" class="img" src="" alt=""/>
-            </div>
+      <div id="heading">
+         <div id="headingContainer">
+            <div id="headingTitle" class="headingTitle"></div>
+            <div id="headingSubtitle" class="headingTitle"></div>
          </div>
-         <span id="text"></span>
-         <!--<div id="autori">
-            <p id="autore-descrizione"></p>
-            <p id="autore-audio"></p>
-         </div>-->
+         <div class="container-bottoni">
+            <button id="play" class="play"><i class="fas fa-play"></i></button>
+            <button id="stopp" class="stop"><i class="fas fa-stop"></i></button>
+            <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
+         </div>
       </div>
-   </div>
-</div>
+      <div class="body-desc" id="bodyDesc">
+         <div id="text5" class="text">
+            <div class="image-container">
+               <div class="poster1">
+                  <img id="img" class="img" src="" alt=""/>
+               </div>
+            </div>
+            <span id="text"></span>
+            <!--<div id="autori">
+               <p id="autore-descrizione"></p>
+               <p id="autore-audio"></p>
+            </div>-->
+         </div>
+      </div>
+  </div>
 
-   <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
-
-   <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
-   <button id="contactsButton" class="contactsButton" onclick="openModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-id-card"></i></button>
-   <div id="rightButton">
+  <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
+   
+  <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
+  <button id="contactsButton" class="contactsButton" onclick="openModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-id-card"></i></button>
+  <div id="rightButton">
      <button id="darkMode" class="darkModeButton" onclick="changeMode('toLight')"><i class="far fa-lightbulb"></i></button>
      <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
      <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
-   </div>
-
-   <!-- <div class="modal" id="modal">
-   <div class="modal-header">
-       <div class="title" id="titolo-contattaci"></div>
-       <button id="closeForm" class="close-button" onclick="closeModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-times"></i></button>
-   </div>
-   <div id="form-testo">
-      <div class="domande" id="form">
-         <div class="sottotitolo-domande" id="segnala-problema"></div>
-         <div class="form-wrapper">
-            <textarea placeholder="Descrivici il problema" id="messaggio-utente"></textarea>
-         </div>
-         <div class="sottotitolo-domande" id="lascia-e-mail"></div>
-         <div class="form-wrapper">
-            <input type="text" id="e-mail-holder" placeholder="Scrivi qui la tua e-mail (opzionale)">
-         </div>
-         <div class="invia">
-            <button id='indietro-crediti'></button>
-            <button id="invia-messaggio"></button>
-         </div>
-      </div>
-   </div>
-   <div id="feedback-form">
-      <div class="domande" id="voto">
-         <div class="sottotitolo-domande" id="voto-al-sito"></div>
-         <div class="riga-domande">
-            <button id="1-val" data-domande-sito>1</button>
-            <button id="2-val" data-domande-sito>2</button>
-            <button id="3-val" data-domande-sito>3</button>
-            <button id="4-val" data-domande-sito>4</button>
-            <button id="5-val-"data-domande-sito>5</button>
-         </div>
-      </div>
-      <div class="domande" id="form">
-         <div class="sottotitolo-domande" id="scrivici-un-mess"></div>
-         <div class="form-wrapper">
-            <textarea placeholder="Lascia una recensione" id="messaggio-utente-feedback"></textarea>
-         </div>
-         <div class="invia">
-            <button id='indietro-crediti-feedback'></button>
-            <button id="invia-messaggio-feedback"></button>
-         </div>
-      </div>
-    </div>
-    <div id="parte-crediti">
-      <div class="domande" id="form" style="text-align: center;">
-         <div class="sottotitolo-domande" id="creatori-title"></div>
-         <div class="icon-wrapper">
-            <div class="git-wrap">
-               <a onclick="window.open('https://github.com/tommasomoro8')"><i class="fab fa-github fa-3x"></i></a>
-               <div>Tommaso Moro</div>
-            </div>
-            <div class="git-wrap">
-               <a onclick="window.open('https://github.com/IvanLomaka')"><i class="fab fa-github fa-3x"></i></a>
-               <div>Ivan Lomaka</div>
-            </div>
-         </div>
-      </div>
-      <div class="domande" style="text-align: center;">
-         <div class="feedback-wrapper">
-            <button id="segnala-un-problema"></button>
-            <button id="bottone-feedback"></button>
-         </div>
-      </div>
-    </div>
-   </div>-->
+  </div>
 
    <div id="overlay"></div>
 
@@ -345,22 +279,22 @@
   <script src="firebase.js" type="module"></script>
 
   <script>
-   preloadImages(() => {
-      if (language == "EN")
-         document.title = "The Scrovegni Chapel"
-      else if (language == "IT")
-         document.title = "Cappella Degli Scrovegni"
-   })
-
    window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
          moveCamera()
          moveFov(65, 2000)
          homeOverlay.style.opacity = 0
       }, 1000);
+
+      preloadImages(() => {
+         if (language == "EN")
+            document.title = "The Scrovegni Chapel"
+         else if (language == "IT")
+            document.title = "Cappella Degli Scrovegni"
+      })
    });
   </script>
 
-  <noscript><div class="noscript">Il tuo browser non supporta JavaScript!<br><br>Your browser does not support JavaScript!</div></noscript>
+  <noscript><div class="noscript">Attiva JavaScript dalle impostazioni del tuo browser<div id="noscript-space"></div>Enable JavaScript in your browser settings</div></noscript>
 </body>
 </html>
