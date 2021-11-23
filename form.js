@@ -102,7 +102,6 @@ buttonSendReview.addEventListener('click', () => {
         }
         valSito = -1
 
-        console.log(data)
         success(data)
     }
 })
@@ -113,6 +112,8 @@ function allRed(element) {
 }
 
 function success(data) {
+    console.log(data)
+
     cliccaPerForm.classList.remove('selected')
     cliccaPerFeedback.classList.remove('selected')
     parteForm.style.transform = 'translateX(100%)'
