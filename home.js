@@ -189,7 +189,7 @@ function moveCamera() {
       setTimeout(() => {
         homeOverlay.style.display = "none"
         homeOverlay.style.transition = '2s'
-      }, 500)
+      }, 800)
     }
       
     if (nextScene != 6){

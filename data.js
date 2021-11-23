@@ -47,6 +47,13 @@ const scrollData = [
         posZ: 0,
         rotX: 0,
         rotY: 0
+    },
+    {// scene 7 (from indoor to home init scene)
+        posX: 0,
+        posY: 10,
+        posZ: 20,
+        rotX: 0,
+        rotY: 0
     }
 ]
 
@@ -83,8 +90,8 @@ const languageFormData = [
     },
     {
         getId: document.getElementById('CCT-programmers-txt'),
-        ita: 'Ideatori e programmatori del sito: Ivan si è occupato della parte grafica del sito, mentre Tommaso delle animazioni del modello 3D.',
-        ing: 'Creators and programmers of the site: Ivan took care of the graphic part of the site, while Tommaso of the animations of the 3D model.'
+        ita: 'Ideatori e programmatori del sito: Ivan si è occupato della parte grafica del sito, mentre Tommaso delle animazioni del modello 3d.',
+        ing: 'Creators and programmers of the site: Ivan took care of the graphic part of the site, while Tommaso of the animations of the 3d model.'
     },
     {
         getId: document.getElementById('CCT-readers'),

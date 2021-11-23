@@ -47,40 +47,21 @@ function goHome() {
     home.style.display = "flex";
 
     animateHome()
+    attualScene = 7
     nextScene = 0
     moveCamera()
-    //homeOverlay.style.display = "none"
-    //homeOverlay.style.opacity = 0
+    homeOverlay.style.display = "flex"
+    homeOverlay.style.opacity = 0
+
     setTimeout(() => {
       homeOverlay.style.display = "none"
       homeText1.classList.add("appear")
       document.body.style.overflowY = "scroll"
       blockSroll(false)
       isMoving = false
+      homeOverlay.style.transition = '2s'
     }, 2000)
   }, 1000)
-
-  
-
-
-
-
-
-
-  //SISTEMARE QUI
-  /*if (descriptionOpen) closeDescription()
-  indoor.style.display = "none";
-  backHomeButton.style.display = "none";
-  contactsButton.style.display = "flex";
-  rightButton.style.display = "flex";
-  home.style.display = "flex";
-  document.body.style.overflowY = "scroll"
-  for (i = 1; i <= 5; i++)
-    document.getElementById("homeText"+i).className = "homeText t"+i
-  homeText1.classList.add("fromtop")
-  animateHome()
-  home.scrollTop = 0
-  moveCamera()*/
 }
 
 var language = "EN"
