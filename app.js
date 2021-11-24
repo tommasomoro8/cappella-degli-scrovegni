@@ -91,7 +91,7 @@ function changeLang() {
     homeText1.innerHTML = "Cappella<br>&nbsp;&nbsp;degli Scrovegni"
     homeText2.innerHTML = "Affrescata<br>&nbsp;&nbsp;da Giotto"
     homeText3.innerHTML = "Costruita a<br>&nbsp;&nbsp;Padova nel 1300"
-    homeText4.innerHTML = "Patrimonio dell'<br>&nbsp;&nbsp;UNESCO dal 2021"
+    homeText4.innerHTML = "Patrimonio<br>&nbsp;&nbsp;UNESCO dal 2021"
     homeText5.innerHTML = "Clicca per<br>&nbsp;&nbsp;esplorare l'interno"
 
   }
@@ -142,8 +142,7 @@ function checkTime() {
   else changeMode("toLight")
 
   setTimeout(checkTime, 60000); //1 minute
-}
-checkTime()
+}; checkTime()
 
 var currentPoint
 var descriptionOpen = false
