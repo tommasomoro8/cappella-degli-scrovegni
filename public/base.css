@@ -650,13 +650,12 @@ div {
     font-size: 3vh;
     text-align: left;
     padding: 10px;
-    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-weight: bold;
 }
 
 .text-description-school {
-    text-align: left;
+    text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 2.4vh;
@@ -664,7 +663,7 @@ div {
 }
 
 .text-description-school2 {
-    text-align: left;
+    text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1.8vh;
@@ -781,7 +780,6 @@ div {
     font-size: 4vh;
     text-align: left;
     padding: 10px;
-    font-family: 'Oswald', sans-serif;
     font-weight: 400;
     font-weight: bold;
 }
@@ -1278,7 +1276,7 @@ footer {
 
 @media only screen and (min-width: 1400px) {
     .title-text {
-        margin-top: 10vh;
+        margin-top: 4vh;
     }
 
     .poster2 {
