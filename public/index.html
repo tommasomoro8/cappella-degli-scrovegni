@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content=""/>
+  <title>Loading...</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link href="system/logo.png" rel="shortcut icon" type="imag/x-icon"/>
+  <script src="https://kit.fontawesome.com/8ec166334f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+   <div id="homeOverlay"></div>
+
+   <div id="home">
+      <canvas id="homeRender"></canvas>
+      <div id="homeScroll"></div>
+      <div class="homeArrow frombottom" id="homeArrow">
+         <div id="homeArrowText"></div>
+         <img src="system/bottom-arrow.png" class="homeArrowImg" />
+      </div>
+      <div class="homeText t1" id="homeText1"></div>
+      <div class="homeText t2" id="homeText2"></div>
+      <div class="homeText t3" id="homeText3"></div>
+      <div class="homeText t4" id="homeText4"></div>
+      <div class="homeText t5" id="homeText5"></div>
+
+      <div class="modal" id="modal" style="overflow-x: hidden;">
+         <div class="titolo-desc">
+            <span style="margin-left: 2vw;" id="init-title">Chi siamo</span>
+            <i 
+               class="fas fa-times" 
+               onclick="closeModal(document.getElementById('modal'), document.getElementById('overlay'))"
+               style="padding-right: 1vw; padding-top: 0.5vh;"
+            >
+            </i>
+         </div>
+         <div class="modalBody">
+            <div class="school-part">
+               <div class="text-school">
+                  <div class="title-text" id="title-text">
+                     UN PO' SU DI NOI
+                  </div>
+                  <span id="span-title-text"></span>
+                  <div class="text-description-school" id="text-description-school">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis quia explicabo, minus accusamus unde maxime eveniet voluptatibus nihil optio eaque veniam laudantium iure magnam nobis ratione eius aliquam temporibus aut maiores non voluptate. Iure totam itaque fugit quaerat suscipit, non accusamus dolor laudantium! Voluptate voluptatibus facere veniam est cum.
+                  </div>
+                  <div class="text-description-school2" id="text-description-school2">
+                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis officiis quia explicabo, minus accusamus unde maxime eveniet voluptatibus nihil optio eaque veniam laudantium iure magnam nobis ratione eius aliquam temporibus aut maiores non voluptate. Iure totam itaque fugit quaerat suscipit, non accusamus dolor laudantium! Voluptate voluptatibus facere veniam est cum.
+                  </div>
+                  <div class="button-container">
+                     <a onclick="window.open('https://www.liceoduca.edu.it/')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div id="link-school">Scopri di più</div>
+                     </a>
+                   </div>
+               </div>
+               <div class="image-container2">
+                  <div class="poster2">
+                     <img src="https://yt3.ggpht.com/ytc/AKedOLSYdGqMqDQT4-gplN4rGul6SOJm2KRkqcIet9tS=s900-c-k-c0x00ffffff-no-rj" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modalBody" style="width: 100%; background-color: white; color: white;">
+            <div class="credits-part">
+               <div class="adjust-credits">
+                  <div class="credits-card">
+                     <div class="credits-card-title" id="CCT-programmers">SVILUPPATORI</div>
+                     <div class="credits-card-description">
+                        <ul>
+                           <li>Moro Tommaso</li>
+                           <li>Lomaka Ivan</li>
+                        </ul>
+                        <p id="CCT-programmers-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magnam saepe unde alias aliquid quaerat expedita illum praesentium delectus. Libero.</p>
+                     </div>
+                  </div>
+                  <div class="credits-card">
+                     <div class="credits-card-title" id="CCT-readers">LETTRICI</div>
+                     <div class="credits-card-description">
+                        <ul>
+                           <li>Taddei Ginevra</li>
+                           <li>Beraldo Greta</li>
+                        </ul>
+                        <p id="CCT-readers-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magnam saepe unde alias aliquid quaerat expedita illum praesentium delectus. Libero.</p>
+                     </div>
+                  </div>
+                  <div class="credits-card">
+                     <div class="credits-card-title" id="CCT-model">RENDER</div>
+                     <div class="credits-card-description">
+                        <ul>
+                           <li>Lucandrea Bristot</li>
+                        </ul>
+                        <p id="CCT-model-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magnam saepe unde alias aliquid quaerat expedita illum praesentium delectus. Libero.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="adjust-credits">
+                  <div class="credits-card">
+                     <div class="credits-card-title" id="CCT-supervisor">SUPERVISORE</div>
+                     <div class="credits-card-description">
+                        <ul>
+                           <li>Tranchese Cristina</li>
+                        </ul>
+                        <p id="CCT-supervisor-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magnam saepe unde alias aliquid quaerat expedita illum praesentium delectus. Libero.</p>
+                     </div>
+                  </div>
+                  <div class="credits-cardx2">
+                     <div class="credits-card-title" id="CCT-writers">AUTORI</div>
+                     <div class="credits-card-description">
+                        <div class="itiswhatitis">
+                           <div class="names-x2">
+                              <ul>
+                                 <li>Baldasso Alberto</li>
+                                 <li>Bandiera Sara</li>
+                                 <li>Bardi Leonardo</li>
+                                 <li>Bozzo Aurora</li>
+                                 <li>Brunello Simone</li>
+                                 <li>Buttari Irene</li>
+                                 <li>Conte Filippo</li>
+                                 <li>Dariol Lorenzo</li>
+                                 <li>De Lazzari Alessandro</li>
+                                 <li>De Poli Nicola</li>
+                                 <li>Diotallevi Nicolò</li>
+                              </ul>
+                              <ul class="margin10per">
+                                 <li>Fiorotto Tommaso</li>
+                                 <li>Frasetto Francesca Aurora</li>
+                                 <li>Giomo Nicolò</li>
+                                 <li>Granzotto Leonardo</li>
+                                 <li>Grigoletto Davide</li>
+                                 <li>Martinelli Benedetta</li>
+                                 <li>Mestriner Andrea</li>
+                                 <li>Mestriner Christian</li>
+                                 <li>Piovesan Anna</li>
+                                 <li>Taddei Ginevra</li>
+                                 <li>Vanin Emma</li>
+                              </ul>
+                           </div>
+                           <p class="itiswhatitis-child" id="CCT-writers-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, similique voluptatem. Atque laboriosam hic nesciunt, molestiae animi vitae quisquam harum?</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modalBody" style="width: 100%;">
+            <div class="contact-us">
+               <div class="contact-us-title" id="contactUS">Contattaci</div>
+               <div class="contact-us-desc">
+                  <div class="button-feedback">
+                     <button id='bottone-feedback' class="selected">Valuta il sito</button>
+                     <button id="segnala-un-problema">Segnala un problema</button>
+                  </div>
+                  <div class="questions-part">
+                     <div id="form-testo">
+                        <div class="domande" id="form">
+                           <div class="sottotitolo-domande-form" id="report-a-problem-">Segnala un problema</div>
+                           <div class="form-wrapper">
+                              <textarea placeholder="Descrivici il problema" id="messaggio-utente" style="margin-bottom: 2vh;"></textarea>
+                           </div>
+                           <div class="form-wrapper">
+                              <input type="text" id="e-mail-holder" placeholder="Scrivi qui la tua e-mail (opzionale)">
+                           </div>
+                           <div class="invia">
+                              <button id="invia-messaggio">Invia</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="feedback-form">
+                        <div class="sottotitolo-domande" id="voto-al-sito">Dai un voto al sito</div>
+                        <div class="domande" id="voto">
+                           <div class="riga-domande">
+                              <button id="1-val" data-domande-sito title="Gravemente insufficiente">1</button>
+                              <button id="2-val" data-domande-sito title="Lievemente insufficiente">2</button>
+                              <button id="3-val" data-domande-sito title="Sufficiente">3</button>
+                              <button id="4-val" data-domande-sito title="Superiore alla media">4</button>
+                              <button id="5-val-"data-domande-sito title="Fantastico">5</button>
+                           </div>
+                        </div>
+                        <div class="domande" id="form">
+                           <div class="form-wrapper">
+                              <textarea placeholder="Lascia una recensione" id="messaggio-utente-feedback"></textarea>
+                           </div>
+                           <div class="invia">
+                              <button id="invia-messaggio-feedback">Invia</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="extremis" id="exit-p">
+                        <img src="" alt="" id="imageServer">
+                        <p id="textServer">Per favore aspetta</p>
+                     </div>
+                     <div class="extremis2"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modalBody" style="width: 100%;">
+            <footer>
+               <div class="footer-contnent">
+                 <h1>La Cappella degli Scrovegni</h1>
+                 <p><i>“Everything you can imagine is real."</i><br>
+                   <i>-Pablo Picasso</i>
+                 </p>
+                 <div class="icon-wrapper">
+                     <div class="git-wrap">
+                        <a onclick="window.open('https://github.com/tommasomoro8')"><i class="fab fa-github fa-3x"></i></a>
+                        <div>Tommaso Moro</div>
+                     </div>
+                     <div class="git-wrap">
+                        <a onclick="window.open('https://github.com/IvanLomaka')"><i class="fab fa-github fa-3x"></i></a>
+                        <div>Ivan Lomaka</div>
+                     </div>
+                  </div>
+               </div>
+             </footer>
+         </div>
+      </div>
+   </div>
+
+  <div id="indoor" class="indoor"></div>
+
+  <div id="description" class="description">
+      <div id="heading">
+         <div id="headingContainer">
+            <div id="headingTitle" class="headingTitle"></div>
+            <div id="headingSubtitle" class="headingTitle"></div>
+         </div>
+         <div class="container-bottoni">
+            <button id="play" class="play"><i class="fas fa-play"></i></button>
+            <button id="stopp" class="stop"><i class="fas fa-stop"></i></button>
+            <button onclick="closeDescription()" class="close" style="padding-left: 10px;"><i class="fas fa-times"></i></button>
+         </div>
+      </div>
+      <div class="body-desc" id="bodyDesc">
+         <div id="text5" class="text">
+            <div class="image-container">
+               <div class="poster1">
+                  <img id="img" class="img" src="" alt=""/>
+               </div>
+            </div>
+            <span id="text"></span>
+            <!--<div id="autori">
+               <p id="autore-descrizione"></p>
+               <p id="autore-audio"></p>
+            </div>-->
+         </div>
+      </div>
+  </div>
+
+  <div id="backDescription" class="backDescription" onclick="closeDescription()"></div>
+   
+  <button id="backHomeButton" class="backHomeButton" onclick="goHome()"><i class="fas fa-home"></i></button>
+  <button id="contactsButton" class="contactsButton" onclick="openModal(document.getElementById('modal'), document.getElementById('overlay'))"><i class="fas fa-id-card"></i></button>
+  <div id="rightButton">
+     <button id="darkMode" class="darkModeButton" onclick="changeMode('toLight')"><i class="far fa-lightbulb"></i></button>
+     <button id="lightMode" class="darkModeButton" onclick="changeMode('toDark')"><i class="fas fa-lightbulb"></i></button>
+     <button id="langButton" class="langButton"><img class="langImg" id="langImg" src="system/IT.png"/></button>
+  </div>
+
+   <div id="overlay"></div>
+
+  <script src="libraries/three.js"></script>
+  <script src="libraries/OrbitControls.js"></script>
+  <script src="libraries/threex.domevents.js"></script>
+  <script src="libraries/Tween.js"></script>
+  <script src="libraries/ColladaLoader.js"></script>
+  
+  <script src="data.js"></script>
+  <script src="form.js"></script>
+  <script src="home.js"></script>
+  <script src="app.js"></script>
+  <script src="render.js"></script>
+  <script src="firebase.js" type="module"></script>
+
+  <script>
+   window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+         moveCamera()
+         moveFov(65, 2000)
+         homeOverlay.style.opacity = 0
+      }, 1000);
+
+      preloadImages(() => {
+         if (language == "EN")
+            document.title = "The Scrovegni Chapel"
+         else if (language == "IT")
+            document.title = "Cappella Degli Scrovegni"
+      })
+   });
+  </script>
+
+  <noscript><div class="noscript">Attiva JavaScript dalle impostazioni del tuo browser<div id="noscript-space"></div>Enable JavaScript in your browser settings</div></noscript>
+</body>
+</html>
