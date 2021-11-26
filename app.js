@@ -7,10 +7,10 @@ const app = express()
 
 app.use(express.json())
 
-/*app.enable('trust proxy')
+app.enable('trust proxy')
 app.use((req, res, next) => {
     req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
-})*/
+})
 
 app.get('/', (req, res) => {
     app.use(express.static(path.join(__dirname, 'public')))
@@ -45,9 +45,9 @@ app.post('/api/review', async (req, res) => {
 })
 
 
-/*app.get('*', function(req, res){
+app.get('*', function(req, res){
     res.redirect('https://' + req.headers.host)
-})*/
+})
 
 const port =  process.env.PORT || 3000
 app.listen(port, () => console.warn(`Listening on port ${port}...`))
