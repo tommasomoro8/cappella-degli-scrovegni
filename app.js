@@ -26,7 +26,7 @@ app.post('/api/problem', async (req, res) => {
     if (error) return res.status(400).send(error.details[0].message)
 
     const result = await db.logError(req.body.email, req.body.description)
-    if (result.error) return res.status(500).send(result)
+    if (result['error']) return res.status(500).send(result)
 
     res.send(req.body)
 })
@@ -39,7 +39,7 @@ app.post('/api/review', async (req, res) => {
     if (error) return res.status(400).send(error.details[0].message)
 
     const result = await db.logReview(req.body.vote, req.body.review)
-    if (result.error) return res.status(500).send(result)
+    if (result['error']) return res.status(500).send(result)
 
     res.send(req.body)
 })
