@@ -62,6 +62,12 @@ buttonSendFeedback.addEventListener('click', async () => {
         let data = { description: document.getElementById('messaggio-utente').value }
         if (document.getElementById('e-mail-holder').value != "") data.email = document.getElementById('e-mail-holder').value
 
+        cliccaPerForm.classList.remove('selected')
+        cliccaPerFeedback.classList.remove('selected')
+        parteForm.style.transform = 'translateX(100%)'
+        parteFeedback.style.transform = 'translateX(100%)'
+        exitAll.style.transform = 'translateX(0%)'
+
         document.getElementById('messaggio-utente').value = ''
         document.getElementById('e-mail-holder').value = ''
 
@@ -91,6 +97,12 @@ buttonSendReview.addEventListener('click', async () => {
             vote: valSito
         }
 
+        cliccaPerForm.classList.remove('selected')
+        cliccaPerFeedback.classList.remove('selected')
+        parteForm.style.transform = 'translateX(100%)'
+        parteFeedback.style.transform = 'translateX(100%)'
+        exitAll.style.transform = 'translateX(0%)'
+
         document.getElementById('messaggio-utente-feedback').value = ''
         for(let i = 0; i < bottoniValutazioneSito.length; i++) {
             bottoniValutazioneSito[i].classList.remove('button-active')
@@ -108,13 +120,6 @@ function allRed(element) {
 }
 
 function success(bool) {
-
-    cliccaPerForm.classList.remove('selected')
-    cliccaPerFeedback.classList.remove('selected')
-    parteForm.style.transform = 'translateX(100%)'
-    parteFeedback.style.transform = 'translateX(100%)'
-    exitAll.style.transform = 'translateX(0%)'
-
     if(bool) {
         imageServer.src = 'system/success-icon.png'
         let ita
@@ -126,7 +131,7 @@ function success(bool) {
         let ita
         language == 'IT' ? ita = true : ita = false
 
-        ita ? textServer.textContent = 'C\'è stato un problema' : textServer.textContent = 'Something is not right'
+        ita ? textServer.textContent = 'C\'è stato un problema' : textServer.textContent = 'Something went right'
     }
 }
 
