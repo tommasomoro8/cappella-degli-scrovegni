@@ -18,6 +18,7 @@
   "homepage": "https://github.com/tommasomoro8/cappella-degli-scrovegni#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
     "joi": "^17.4.2"
   }
 }
