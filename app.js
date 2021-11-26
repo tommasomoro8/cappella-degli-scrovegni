@@ -44,10 +44,10 @@ app.post('/api/review', async (req, res) => {
     res.send(req.body)
 })
 
-
+/*
 app.get('*', function(req, res){
     res.redirect('https://' + req.headers.host)
-})
+})*/
 
 const port =  process.env.PORT || 3000
 app.listen(port, () => console.warn(`Listening on port ${port}...`))
