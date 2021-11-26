@@ -131,7 +131,7 @@ function success(bool) {
         let ita
         language == 'IT' ? ita = true : ita = false
 
-        ita ? textServer.textContent = 'C\'è stato un problema' : textServer.textContent = 'Something went right'
+        ita ? textServer.textContent = 'C\'è stato un problema' : textServer.textContent = 'Something went wrong'
     }
 }
 
