@@ -1070,7 +1070,7 @@ footer {
     right: 0;
     background-color: #111;
     height: auto;
-    width: 100%;
+    width: 100vw;
     font-family: "Roboto", sans-serif;
     padding-top: 40px;
     color: #fff;
