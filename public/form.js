@@ -54,26 +54,23 @@ cliccaPerFeedback.addEventListener('click', () => {
 const buttonSendFeedback = document.getElementById('invia-messaggio')
 const buttonSendReview = document.getElementById('invia-messaggio-feedback')
 
-buttonSendFeedback.addEventListener('click', () => {
+buttonSendFeedback.addEventListener('click', async () => {
     if(document.getElementById('messaggio-utente').value == '') {
         allRed(document.getElementById('messaggio-utente'))
         return 1
     } else {
-        let data = {
-            userFeedback: document.getElementById('messaggio-utente').value,
-            userEmail: document.getElementById('e-mail-holder').value,
-            timestamp: new Date(),
-            review: false,
-        }
+        let data = { description: document.getElementById('messaggio-utente').value }
+        if (document.getElementById('e-mail-holder').value != "") data.email = document.getElementById('e-mail-holder').value
 
         document.getElementById('messaggio-utente').value = ''
         document.getElementById('e-mail-holder').value = ''
 
-        success(data)
+        const result = await callAPI('problem', 'POST', data)
+        success(result == 200)
     }
 })
 
-buttonSendReview.addEventListener('click', () => {
+buttonSendReview.addEventListener('click', async () => {
     if(valSito == -1) {
         for(let i = 0; i < bottoniValutazioneSito.length; i++) {
             bottoniValutazioneSito[i].classList.add('tomatoColor')
@@ -90,10 +87,8 @@ buttonSendReview.addEventListener('click', () => {
         return 1
     }  else {
         let data = {
-            userFeedback: document.getElementById('messaggio-utente-feedback').value,
-            userRate: valSito,
-            timestamp: new Date(),
-            review: true,
+            review: document.getElementById('messaggio-utente-feedback').value,
+            vote: valSito
         }
 
         document.getElementById('messaggio-utente-feedback').value = ''
@@ -102,7 +97,8 @@ buttonSendReview.addEventListener('click', () => {
         }
         valSito = -1
 
-        success(data)
+        const result = await callAPI('review', 'POST', data)
+        success(result == 200)
     }
 })
 
@@ -111,8 +107,7 @@ function allRed(element) {
     setTimeout(() => {element.classList.remove('redColor')}, 1500)
 }
 
-function success(data) {
-    console.log(data)
+function success(bool) {
 
     cliccaPerForm.classList.remove('selected')
     cliccaPerFeedback.classList.remove('selected')
@@ -120,7 +115,7 @@ function success(data) {
     parteFeedback.style.transform = 'translateX(100%)'
     exitAll.style.transform = 'translateX(0%)'
 
-    if(/*funzione server con data come parametro*/true) {
+    if(bool) {
         imageServer.src = 'system/success-icon.png'
         let ita
         language == 'IT' ? ita = true : ita = false
@@ -166,4 +161,21 @@ function changeFormLang() {
     }
 
     ita ? textServer.textContent = 'Per favore aspetta' : textServer.textContent = 'Please wait'
+}
+
+// api call
+
+async function callAPI(url, method, body) {
+    const headers = new Headers()
+    headers.append('Content-Type', 'application/json')
+
+    const requestOptions = {
+        method: method,
+        headers: headers,
+        body: JSON.stringify(body)
+    }
+
+    const response = await fetch(`/api/${url}`, requestOptions)
+
+    return response.status
 }
