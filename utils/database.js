@@ -9,14 +9,16 @@ admin.initializeApp({
 const db = admin.firestore()
 
 async function logError(email, description) {
+    var data = {
+        description: description,
+        date: admin.firestore.Timestamp.fromDate(new Date()),
+        solved: false
+    }; if (email) data.email = email
+
     try {
-        await db.collection('errors').add({
-            email: email,
-            description: description,
-            date: admin.firestore.Timestamp.fromDate(new Date()),
-            solved: false
-        })
+        await db.collection('errors').add(data)
     } catch (e) {
+        console.log(e)
         return { error: e }
     }
     
@@ -31,6 +33,7 @@ async function logReview(vote, review) {
             date: admin.firestore.Timestamp.fromDate(new Date())
         })
     } catch (e) {
+        console.log(e)
         return { error: e }
     }
 

@@ -71,6 +71,8 @@ buttonSendFeedback.addEventListener('click', async () => {
         document.getElementById('messaggio-utente').value = ''
         document.getElementById('e-mail-holder').value = ''
 
+        console.log(data)
+
         const result = await callAPI('problem', 'POST', data)
         success(result == 200)
     }
