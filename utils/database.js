@@ -19,6 +19,8 @@ async function logError(email, description) {
     } catch (e) {
         return { error: e }
     }
+    
+    return { }
 }
 
 async function logReview(vote, review) {
@@ -31,6 +33,8 @@ async function logReview(vote, review) {
     } catch (e) {
         return { error: e }
     }
+
+    return { }
 }
 
 module.exports = { logError, logReview }
