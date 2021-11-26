@@ -3,6 +3,7 @@ const path = require('path')
 const express = require('express')
 
 const db = require('./utils/database.js')
+const { nextTick } = require('process')
 const app = express()
 
 app.use(express.json())
@@ -10,6 +11,7 @@ app.use(express.json())
 app.enable('trust proxy')
 app.use((req, res, next) => {
     req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+    (req.url == '/' || req.url == '/api/problem' || req.url == '/api/review') ? next() : res.redirect('http://' + req.headers.host)
 })
 
 app.get('/', (req, res) => {
@@ -43,11 +45,6 @@ app.post('/api/review', async (req, res) => {
 
     res.send(req.body)
 })
-
-/*
-app.get('*', function(req, res){
-    res.redirect('https://' + req.headers.host)
-})*/
 
 const port =  process.env.PORT || 3000
 app.listen(port, () => console.warn(`Listening on port ${port}...`))
