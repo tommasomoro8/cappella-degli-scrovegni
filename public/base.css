@@ -25,6 +25,10 @@ div, button, canvas:focus {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+#text {
+    white-space: pre-wrap;
+}
+
 canvas:active {
     cursor: grabbing;
 }
