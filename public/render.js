@@ -76,7 +76,10 @@ for (let i = 0; i < data.length; i++) {
 
   domEvents.addEventListener(sphere, 'mouseover', () => indoor.style.cursor = "pointer")
   domEvents.addEventListener(sphere, 'mouseout', () => indoor.style.cursor = "default")
-  domEvents.addEventListener(sphere, 'click', () => animationCamera(i))
+  domEvents.addEventListener(sphere, 'click', () => {
+    animationCamera(i)
+    indoor.style.cursor = "default"
+  })
   domEvents.addEventListener(sphere, 'touchstart', () => animationCamera(i))
 }
 
