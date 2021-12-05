@@ -1,9 +1,7 @@
 const admin = require('firebase-admin')
 
-const serviceAccount = require('./cappella-degli-scrovegni-firebase-adminsdk-dsax4-35d06b8ad6.json')
-
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(require('./cappella-degli-scrovegni-firebase-adminsdk-dsax4-35d06b8ad6.json'))
 })
 
 const db = admin.firestore()

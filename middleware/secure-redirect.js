@@ -1,0 +1,1 @@
+module.exports = (req, res, next) => process.env.NODE_ENV == 'production' && !req.secure ? res.redirect('https://' + req.headers.host + req.url) : next()
