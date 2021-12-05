@@ -1,5 +1,5 @@
 # Cappella degli Scrovegni 360°
 📍 Padova, Italy
 
-# env required:
+# Env required:
 - NODE_ENV=production
