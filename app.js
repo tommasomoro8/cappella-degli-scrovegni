@@ -9,7 +9,7 @@ const app = express()
 
 app.enable('trust proxy')
 app.use(express.json())
-app.use(helmet())
+app.use(helmet({ contentSecurityPolicy: false }))
 
 app.use(secure)
 app.use('/', home)
