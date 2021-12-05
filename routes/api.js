@@ -1,10 +1,6 @@
-const db = require('../utils/database')
+const db = require('../database/database')
 const Joi = require('joi')
 const router = require('express').Router()
-
-router.get('/test', (req, res) => {
-    res.send(process.env.NODE_ENV)
-})
 
 router.post('/problem', async (req, res) => {
     const { error } = Joi.object({
