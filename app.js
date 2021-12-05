@@ -17,4 +17,4 @@ app.use('/api', api)
 app.use(error)
 
 const port =  process.env.PORT || 3000
-app.listen(port, () => console.warn(`Listening on port ${port}...`))
+app.listen(port, () => console.log(`Listening on port ${port} in ${process.env.NODE_ENV || 'development'} mode...`))
