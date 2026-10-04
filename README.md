@@ -82,36 +82,22 @@ The flag button switches between Italian and English: descriptions, audio and in
 
 ```mermaid
 flowchart LR
-  subgraph Browser["Browser · src/public"]
-    Data[("data.js<br>keyframes, 58 points, texts")]
-    Home["Home screen<br>home.js · render.dae"]
-    Interior["Interior screen<br>render.js · cubemap"]
-    Panel["Fresco panel<br>app.js · img/N.png, audio/N.m4a"]
-    About["About us window<br>form.js"]
-    Lang["Language button<br>app.js · analytics.js"]
+  subgraph Browser
+    Home["Home<br>3D exterior"]
+    Interior["Interior<br>360° panorama"]
+    Panel["Fresco panel<br>text and audio"]
+    About["About us<br>rating and problem forms"]
   end
-  subgraph Server["Express server · src"]
-    Static["routes/home.js<br>static files"]
-    API["routes/api.js<br>Joi validation"]
-    DB["database/database.js<br>firebase-admin"]
-  end
-  Firestore[("Firestore<br>errors, reviews")]
-  Analytics["Firebase Analytics"]
+  Server["Express server"]
+  Firestore[("Firestore")]
 
-  Static -->|"HTML, scripts, model, images, audio"| Browser
-  Data -->|"camera keyframes"| Home
-  Data -->|"point positions"| Interior
-  Data -->|"titles, texts"| Panel
-  Home -->|"click on the last viewpoint: goIndoor()"| Interior
-  Interior -->|"click on a point: tween, then openDescription()"| Panel
-  Interior -->|"home button: goHome()"| Home
+  Server -->|"serves the site"| Home
+  Home -->|"click to enter"| Interior
+  Interior -->|"click on a point"| Panel
+  Interior -->|"home button"| Home
   Home -->|"contacts button"| About
-  About -->|"POST /api/problem, /api/review"| API
-  API --> DB
-  DB -->|"add()"| Firestore
-  Lang -->|"Italian or English"| Home
-  Lang -->|"Italian or English"| Panel
-  Lang -->|"change_lang event"| Analytics
+  About -->|"POST /api"| Server
+  Server -->|"saves forms"| Firestore
 ```
 
 - **No build step.** `index.html` loads every script with a plain `<script>` tag, and the scripts share global variables. The order matters: `data.js` comes first, then `form.js`, `home.js`, `app.js` and `render.js`. three.js and its add-ons are copied into `src/public/libraries/`.
