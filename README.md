@@ -36,7 +36,7 @@ JavaScript, HTML, CSS, three.js, Tween.js, Node.js, Express, Joi, Firebase (Fire
 
 <!-- portfolio:start -->
 ## The problem
-My art history teacher, Prof. Cristina Tranchese, had seen a website that rebuilt the Scrovegni Chapel in 3D. She wanted one made by my school. She gave the job of building the site to me and [Ivan Lomaka](https://github.com/ivanlomaka). The rest of the class, 3BA at Liceo Duca degli Abruzzi in Treviso, would write the descriptions of the frescoes and record them as audio, in Italian and in English.
+My art history teacher, Prof. Cristina Tranchese, had seen a website that rebuilt the Scrovegni Chapel in 3D. She wanted one made by my school. She gave the job of building the site to me and [@IvanLomaka](https://github.com/ivanlomaka). The rest of the class, 3BA at Liceo Duca degli Abruzzi in Treviso, would write the descriptions of the frescoes and record them as audio, in Italian and in English.
 
 I was a beginner. I had just finished a [chess game](https://github.com/tommasomoro8/chess) and had never used three.js or worked in 3D. At the time, it was no small challenge.
 
