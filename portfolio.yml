@@ -27,9 +27,7 @@ press:
 screenshots:                       # gallery shown under the text on the portfolio, in this order
   - path: docs/screenshots/cover.png
     alt: "The 3D model of the chapel's exterior floating in a starry space, next to the title \"Scrovegni Chapel\""
-  - path: docs/screenshots/home-enter.png
-    alt: "The last home viewpoint, with the text \"Click to explore inside\""
   - path: docs/screenshots/interior.png
     alt: "The 360° view of the interior with white dots on the frescoes"
   - path: docs/screenshots/fresco-description.png
-    alt: "The panel for the Crucifixion, with the fresco and its English description"
+    alt: "The panel for the Last Judgment, with the fresco and its English description"

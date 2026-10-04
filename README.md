@@ -11,15 +11,15 @@ A bilingual 3D tour of the Scrovegni Chapel in Padua: anyone can explore the int
 
 <!-- portfolio:summary
 ## The problem
-Our art history teacher wanted our school to make a website that rebuilds the Scrovegni Chapel in 3D. Ivan Lomaka and I had to build it, with no experience in three.js or 3D graphics.
+My art history teacher wanted my school to make a website that rebuilds the Scrovegni Chapel in 3D. I built it with Ivan Lomaka, starting with no experience in three.js or 3D graphics.
 
 ## The solution
 A three.js site: a 3D model of the exterior, then a 360° view of the interior with 58 clickable points. Each point opens a description and an audio guide, in Italian or English, written and recorded by the class.
 
 ## Technical challenges
-- We drove the home camera with the scroll wheel, moving it between fixed viewpoints with an ease-in-out curve.
-- We turned a cubemap into a 360° interior and made 58 points in 3D space clickable.
-- We handed control from the WebGL canvas to an HTML panel and back.
+- I drove the home camera with the scroll wheel, moving it between fixed viewpoints with an ease-in-out curve.
+- I turned a cubemap into a 360° interior and made 58 points in 3D space clickable.
+- I handed control from the WebGL canvas to an HTML panel and back.
 
 ## What I learned
 - The basics of three.js: scenes, cameras, renderers, models, cubemaps.
@@ -30,32 +30,30 @@ A three.js site: a 3D model of the exterior, then a 360° view of the interior w
 JavaScript, HTML, CSS, three.js, Tween.js, Node.js, Express, Joi, Firebase (Firestore, Analytics), Heroku, Netlify
 
 ## Recognition
-- First place in the "To Digital Competence 4.0" contest by USR Veneto and AICA, 2023 ([school news](https://liceoduca.edu.it/2023/12/03/concorso-to-digital-competence-4-0/)).
+- First place, with Ivan Lomaka, in the "To Digital Competence 4.0" contest by USR Veneto and AICA, 2023 ([school news](https://liceoduca.edu.it/2023/12/03/concorso-to-digital-competence-4-0/)).
 -->
 
 <!-- portfolio:start -->
 ## The problem
-Our art history teacher, Prof. Cristina Tranchese, had seen a website that rebuilt the Scrovegni Chapel in 3D. She wanted one made by our school. She gave the job of building the site to Ivan Lomaka and me. The rest of the class, 3BA at Liceo Duca degli Abruzzi in Treviso, would write the descriptions of the frescoes and record them as audio, in Italian and in English.
+My art history teacher, Prof. Cristina Tranchese, had seen a website that rebuilt the Scrovegni Chapel in 3D. She wanted one made by my school. She gave the job of building the site to me and Ivan Lomaka. The rest of the class, 3BA at Liceo Duca degli Abruzzi in Treviso, would write the descriptions of the frescoes and record them as audio, in Italian and in English.
 
-We were beginners. We had just finished a [chess game](https://github.com/tommasomoro8/chess) and had never used three.js or worked in 3D. When she presented the project, we thought it was impossible.
+I was a beginner. I had just finished a [chess game](https://github.com/tommasomoro8/chess) and had never used three.js or worked in 3D. When she presented the project, I thought it was impossible.
 
 ## The solution
 The site opens on a 3D model of the chapel's exterior, floating in a field of stars. Each scroll step moves the camera to a new viewpoint and shows a new line of text. On the last one, a click takes you inside.
-
-![The last home viewpoint, with the text "Click to explore inside"](docs/screenshots/home-enter.png)
 
 The interior is a 360° panorama. You drag to look around. White dots mark 58 frescoes and details. Clicking a dot flies the camera towards it and opens a panel with an image of the work, a description and a play button for the audio guide.
 
 ![The 360° view of the interior with white dots on the frescoes](docs/screenshots/interior.png)
 
-![The panel for the Crucifixion, with the fresco and its English description](docs/screenshots/fresco-description.png)
+![The panel for the Last Judgment, with the fresco and its English description](docs/screenshots/fresco-description.png)
 
 The flag button switches between Italian and English: descriptions, audio and interface change. The home page also has an "About us" window with the credits, a form to rate the site from 1 to 5 and a form to report a problem. The server saves both forms in Firestore.
 
 ## Technical challenges
-- **Scroll-driven camera.** The home page keeps the scroll position fixed in the middle of a tall page and only reads its direction. Each step moves the camera between keyframes stored in `data.js`, over 2 seconds, in `requestAnimationFrame`. For the easing we used the inverse of the cubic (x−2)³ + (x−2) + 10. It maps 0–20 onto 0–4, so the camera starts slowly, speeds up and slows down again.
-- **From outside to inside.** The exterior and the interior are two separate three.js scenes with two renderers. To hide the switch, the code widens the field of view, fades in a black overlay, swaps the scenes and narrows the field of view again. Each render loop stops while its scene is hidden.
-- **Clickable points in a panorama.** The interior is a cubemap set as the scene background, with OrbitControls fixed at the centre, zoom off and rotation inverted so dragging feels like turning your head. Three.js meshes don't receive DOM events, so we used THREEx.DomEvents to get `click`, `mouseover` and `touchstart` on the 58 spheres. A Tween.js animation moves the camera, then the HTML panel opens on top and the controls stay disabled until it closes.
+- **Scroll-driven camera.** The home page keeps the scroll position fixed in the middle of a tall page and only reads its direction. Each step moves the camera between keyframes stored in `data.js`, over 2 seconds, in `requestAnimationFrame`. For the easing I used the inverse of the cubic (x−2)³ + (x−2) + 10. It maps 0–20 onto 0–4, so the camera starts slowly, speeds up and slows down again.
+- **From outside to inside.** The exterior and the interior are two separate three.js scenes with two renderers. To hide the switch, I widen the field of view, fade in a black overlay, swap the scenes and narrow the field of view again. Each render loop stops while its scene is hidden.
+- **Clickable points in a panorama.** The interior is a cubemap set as the scene background, with OrbitControls fixed at the centre, zoom off and rotation inverted so dragging feels like turning your head. Three.js meshes don't receive DOM events, so I used THREEx.DomEvents to get `click`, `mouseover` and `touchstart` on the 58 spheres. A Tween.js animation moves the camera, then the HTML panel opens on top and the controls stay disabled until it closes.
 - **A first server.** The two forms post JSON to Express. Joi validates it (vote from 1 to 5, valid e-mail) before `firebase-admin` writes it to Firestore. The service account comes from environment variables. In production, the server redirects to HTTPS, trusting the proxy's headers.
 
 ## What I learned
@@ -71,7 +69,7 @@ The flag button switches between Italian and English: descriptions, audio and in
 - **Hosting:** Heroku (original deploy), Netlify (current demo)
 
 ## Recognition
-- First place in the "To Digital Competence 4.0" contest, organised by USR Veneto (Ufficio Scolastico Regionale per il Veneto) and AICA (Associazione Italiana per l'Informatica ed il Calcolo Automatico):
+- First place, with Ivan Lomaka, in the "To Digital Competence 4.0" contest, organised by USR Veneto (Ufficio Scolastico Regionale per il Veneto) and AICA (Associazione Italiana per l'Informatica ed il Calcolo Automatico):
   - [Official document, USR Veneto](https://istruzioneveneto.gov.it/wp-content/uploads/2023/06/m_pi.AOODRVE.REGISTRO-UFFICIALEU.0015352.09-06-2023.pdf) (9 June 2023)
   - ["Il digitale oggi", JobOrienta](https://www.joborienta.net/site/it/ev/2023/11/24/il-digitale-oggi/) (24 November 2023)
   - [School news, Liceo Duca degli Abruzzi](https://liceoduca.edu.it/2023/12/03/concorso-to-digital-competence-4-0/) (3 December 2023)
@@ -194,7 +192,7 @@ cappella-degli-scrovegni/
 - **Respect the user's choice.** I would stop the light/dark timer once the user has used the toggle.
 
 ## Credits and license
-- **Ivan Lomaka and Tommaso Moro:** we designed and built the whole site together (3D scenes, interface, server).
+- **Tommaso Moro (me) and Ivan Lomaka:** design and code of the whole site (3D scenes, interface, server).
 - **Lucandrea Bristot:** refined the 3D model of the chapel's exterior.
 - **Class 3BA 2021/22, Liceo Duca degli Abruzzi (Treviso):** descriptions of the works.
 - **Ginevra Taddei and Greta Beraldo:** audio recordings in Italian and English.
