@@ -4,7 +4,7 @@ category: "school"                 # uni | school | pers | comm
 year: 2021
 period: "Sep 2021 – Dec 2021"
 status: "completed"                # completed | in progress | archived
-role: "team of 2, full site (with Ivan Lomaka)"
+role: "team of 2, lead developer (with Ivan Lomaka)"
 cover: docs/screenshots/cover.png
 demo: "https://cappelladegliscrovegni.netlify.app/"
 note: "The rating and problem forms don't work on the demo: it runs without the server."
