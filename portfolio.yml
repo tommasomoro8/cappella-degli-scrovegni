@@ -1,0 +1,35 @@
+title: "Cappella degli Scrovegni 360°"
+slug: "cappella-degli-scrovegni"   # lowercase, hyphens; used in the portfolio URL, never change it once published
+category: "school"                 # uni | school | pers | comm
+year: 2021
+period: "Sep 2021 – Dec 2021"
+status: "completed"                # completed | in progress | archived
+role: "team of 2, full site (with Ivan Lomaka)"
+cover: docs/screenshots/cover.png
+demo: "https://cappelladegliscrovegni.netlify.app/"
+note: "The rating and problem forms don't work on the demo: it runs without the server."
+press:
+  - title: "To Digital Competence 4.0: first place"
+    source: "USR Veneto"
+    kind: "award"
+    date: "2023-06-09"
+    url: "https://istruzioneveneto.gov.it/wp-content/uploads/2023/06/m_pi.AOODRVE.REGISTRO-UFFICIALEU.0015352.09-06-2023.pdf"
+  - title: "Il digitale oggi"
+    source: "JobOrienta"
+    kind: "event"
+    date: "2023-11-24"
+    url: "https://www.joborienta.net/site/it/ev/2023/11/24/il-digitale-oggi/"
+  - title: "Concorso To Digital Competence 4.0"
+    source: "Liceo Duca degli Abruzzi"
+    kind: "article"
+    date: "2023-12-03"
+    url: "https://liceoduca.edu.it/2023/12/03/concorso-to-digital-competence-4-0/"
+screenshots:                       # gallery shown under the text on the portfolio, in this order
+  - path: docs/screenshots/cover.png
+    alt: "The 3D model of the chapel's exterior floating in a starry space, next to the title \"Scrovegni Chapel\""
+  - path: docs/screenshots/home-enter.png
+    alt: "The last home viewpoint, with the text \"Click to explore inside\""
+  - path: docs/screenshots/interior.png
+    alt: "The 360° view of the interior with white dots on the frescoes"
+  - path: docs/screenshots/fresco-description.png
+    alt: "The panel for the Crucifixion, with the fresco and its English description"
