@@ -4,7 +4,7 @@ A bilingual 3D tour of the Scrovegni Chapel in Padua: anyone can explore the int
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 ![Language](https://img.shields.io/badge/language-JavaScript-f7df1e)
-[![Award: 1st place, To Digital Competence 4.0 (Veneto)](https://img.shields.io/badge/award-1st%20place%20To%20Digital%20Competence%204.0%20%28Veneto%29-gold)](#recognition)
+[![1st Place: To Digital Competence 4.0 (Veneto)](https://img.shields.io/badge/%F0%9F%A5%87%201st%20Place-To%20Digital%20Competence%204.0%20%28Veneto%29-d67e4d)](#recognition)
 
 ![The 3D model of the chapel's exterior floating in a starry space, next to the title "Scrovegni Chapel"](docs/screenshots/cover.png)
 
