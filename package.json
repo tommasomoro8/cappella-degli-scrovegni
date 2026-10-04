@@ -2,14 +2,16 @@
   "name": "cappella-degli-scrovegni",
   "version": "1.0.0",
   "description": "Cappella degli Scrovegni website",
-  "main": "app.js",
-  "scripts": {},
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tommasomoro8/cappella-degli-scrovegni.git"
   },
   "author": "Tommaso Moro, Ivan Lomaka",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tommasomoro8/cappella-degli-scrovegni/issues"
   },
