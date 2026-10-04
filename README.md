@@ -190,10 +190,10 @@ cappella-degli-scrovegni/
 - **Lighter audio.** I would re-encode the speech recordings at a lower bitrate to cut the download size.
 
 ## Credits and license
-- **Tommaso Moro (me) and Ivan Lomaka:** design and code of the whole site (3D scenes, interface, server).
-- **Lucandrea Bristot:** refined the 3D model of the chapel's exterior.
+- **Tommaso Moro and Ivan Lomaka:** design and code of the whole site (3D scenes, interface, server).
 - **Class 3BA 2021/22, Liceo Duca degli Abruzzi (Treviso):** descriptions of the frescoes.
 - **Ginevra Taddei and Greta Beraldo:** audio recordings in Italian and English.
+- **Andrea Luca Bristot (3AA):** refined the 3D model of the chapel's exterior.
 - **Prof. Cristina Tranchese:** art history teacher, she proposed the project and supervised it.
 - Libraries: [three.js](https://threejs.org/) with OrbitControls and ColladaLoader, [Tween.js](https://github.com/tweenjs/tween.js), [THREEx.DomEvents](https://github.com/jeromeetienne/threex.domevents), [Express](https://expressjs.com/), [Joi](https://joi.dev/), [Helmet](https://helmetjs.github.io/), [Firebase](https://firebase.google.com/).
 - Icons: [Font Awesome](https://fontawesome.com/). Fonts: [Lato](https://fonts.google.com/specimen/Lato), [Sora](https://fonts.google.com/specimen/Sora), [Lobster](https://fonts.google.com/specimen/Lobster) and [Roboto](https://fonts.google.com/specimen/Roboto) from Google Fonts.
