@@ -188,4 +188,4 @@ The code is released under the [MIT License](LICENSE). The audio recordings in `
 
 ---
 
-Created by Tommaso Moro and Ivan Lomaka in December 2021.
+Created by Tommaso Moro and Ivan Lomaka in March 2022.
