@@ -12,10 +12,10 @@ A bilingual 3D tour of the Scrovegni Chapel in Padua: anyone can explore the int
 
 <!-- portfolio:summary
 ## The problem
-My art history teacher wanted a website that rebuilds the Scrovegni Chapel in 3D, with descriptions and audio guides of the frescoes made by the class. I built it with Ivan Lomaka.
+My art history teacher wanted a website that rebuilds the Scrovegni Chapel in 3D, with descriptions and audio guides of the frescoes made by the class. I built the site with my classmate [@IvanLomaka](https://github.com/IvanLomaka), and together we designed and coded all of it, from the 3D scenes to the interface and the server.
 
 ## The solution
-A three.js site: a 3D model of the exterior, then a 360° view of the interior with 58 clickable points. Each point opens a description and an audio guide, in Italian or English, written and recorded by the class.
+A three.js site that opens on a 3D model of the exterior and then moves into a 360° view of the interior, with 58 clickable points. Each point opens a description and an audio guide, in Italian or English, written and recorded by the class.
 
 ## Technical challenges
 - I drove the home camera with the scroll wheel, moving it between fixed viewpoints with an ease-in-out curve.

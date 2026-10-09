@@ -7,7 +7,7 @@ status: "completed"                # completed | in progress | archived
 role: "team of 2, lead developer"
 cover: docs/screenshots/cover.png
 demo: "https://cappelladegliscrovegni.netlify.app/"
-note: "The rating and problem forms don't work on the demo: it runs without the server."
+note: "The demo is served as a static page, so the rating and problem forms don't work there."
 press:
   - title: "To Digital Competence 4.0: first place"
     source: "USR Veneto"
