@@ -1,4 +1,4 @@
-# Cappella degli Scrovegni 360°
+# Scrovegni Chapel 360° Virtual Tour
 
 A bilingual 3D tour of the Scrovegni Chapel in Padua: anyone can explore the interior from the browser and open a description and an audio guide for each of 58 frescoes.
 
@@ -163,7 +163,7 @@ cappella-degli-scrovegni/
 ## Known limitations and future work
 
 **Limitations**
-- The live demo runs without the Express server, so the rating and problem forms don't work there.
+- The demo is served as a static page, so the rating and problem forms don't work there.
 - The server doesn't start without the Firebase variables: `database.js` crashes when it reads `PRIVATE_KEY`.
 - When Firestore rejects a write, `routes/api.js` sends the whole error object to the browser.
 - The page title stays "Loading..." if even one of the 64 preloaded images fails to load.
